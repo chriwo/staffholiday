@@ -1,0 +1,124 @@
+plugin.tx_staffholiday {
+    view {
+        layoutRootPaths {
+            0 = EXT:staffholiday/Resources/Private/Layouts
+            1 = {$plugin.tx_staffholiday.view.layoutRootPath}
+        }
+        partialRootPaths {
+            0 = EXT:staffholiday/Resources/Private/Partials
+            1 = {$plugin.tx_staffholiday.view.partialRootPath}
+        }
+        templateRootPaths {
+            0 = EXT:staffholiday/Resources/Private/Templates
+            1 = {$plugin.tx_staffholiday.view.templateRootPath}
+        }
+    }
+
+    settings {
+        list {
+            filter {
+                fieldsToSearch = user.first_name, user.last_name, user.name
+            }
+
+            image {
+                width = 50c
+                height = 50c
+            }
+        }
+
+        new {
+            confirmByAdmin = 1
+            confirmPageTypeNum = 1504773051
+
+            email {
+                createAdminConfirmation {
+                    sender {
+                        name = TEXT
+                        name.value = {$plugin.tx_staffholiday.settings.mailing.senderName}
+
+                        email = TEXT
+                        email.value = {$plugin.tx_staffholiday.settings.mailing.senderEmail}
+                    }
+
+                    receiver {
+                        name = TEXT
+                        name.value =
+
+                        email = TEXT
+                        email.value =
+                    }
+
+                    subject = TEXT
+                    subject.data = LLL:EXT:staffholiday/Resources/Private/Language/locallang.xlf:emailCreateAdminConfirmationSubject
+                }
+
+                createUserNotify {
+                    sender {
+                        name = TEXT
+                        name.value = {$plugin.tx_staffholiday.settings.mailing.senderName}
+
+                        email = TEXT
+                        email.value = {$plugin.tx_staffholiday.settings.mailing.senderEmail}
+                    }
+
+                    # Overwrite Subject
+                    subject = TEXT
+                    subject.data = LLL:EXT:staffholiday/Resources/Private/Language/locallang.xlf:emailCreateUserNotifySubject
+                }
+
+                createUserNotifyRefused {
+                    sender {
+                        name = TEXT
+                        name.value = {$plugin.tx_staffholiday.settings.mailing.senderName}
+
+                        email = TEXT
+                        email.value = {$plugin.tx_staffholiday.settings.mailing.senderEmail}
+                    }
+
+                    # Overwrite Subject
+                    subject = TEXT
+                    subject.data = LLL:EXT:staffholiday/Resources/Private/Language/locallang.xlf:emailCreateUserNotifyRefusedSubject
+                }
+            }
+        }
+    }
+}
+
+#################################
+# Inlude CSS and JavaScript files
+#################################
+page {
+    includeCSS {
+        tx-staffholiday = EXT:staffholiday/Resources/Public/Css/_staffholiday.css
+    }
+    includeJSFooter {
+        tx-staffholidy = EXT:staffholiday/Resources/Public/JavaScript/staffholiday.js
+    }
+}
+
+staffholiday_change_status = PAGE
+staffholiday_change_status {
+    typeNum = 1504773051
+
+    config {
+        disableAllHeaderCode = 1
+        disablePrefixComment = 1
+        xhtml_cleaning = 0
+        admPanel = 0
+    }
+
+    10 = USER
+    10 {
+        userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
+        extensionName = Staffholiday
+        pluginName = Pi1
+        vendorName = ChriWo
+        switchableControllerActions {
+            New {
+                1 = confirmCreateRequest
+            }
+        }
+
+        settings < plugin.tx_staffholiday.settings
+    }
+}

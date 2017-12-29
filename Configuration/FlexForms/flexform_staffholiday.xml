@@ -1,0 +1,205 @@
+<T3DataStructure>
+    <meta>
+        <langDisable>1</langDisable>
+    </meta>
+    <sheets>
+        <main>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>LLL:EXT:staffholiday/Resources/Private/Language/locallang_flexform.xlf:main.title</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <switchableControllerActions>
+                        <TCEforms>
+                            <label>LLL:EXT:staffholiday/Resources/Private/Language/locallang_flexform.xlf:main.view</label>
+                            <onChange>reload</onChange>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">LLL:EXT:staffholiday/Resources/Private/Language/locallang_flexform.xlf:pleaseChoose</numIndex>
+                                        <numIndex index="1"></numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">LLL:EXT:staffholiday/Resources/Private/Language/locallang_flexform.xlf:main.view.0</numIndex>
+                                        <numIndex index="1">New->new;New->create;New->createStatus;New->confirmCreateRequest;</numIndex>
+                                    </numIndex>
+                                    <!--
+                                    <numIndex index="2" type="array">
+                                        <numIndex index="0">LLL:EXT:staffholiday/Resources/Private/Language/locallang_flexform.xlf:main.view.1</numIndex>
+                                        <numIndex index="1">Edit->edit;Edit->update;Edit->delete;Edit->confirmUpdateRequest;</numIndex>
+                                    </numIndex>
+                                    -->
+                                    <numIndex index="3" type="array">
+                                        <numIndex index="0">LLL:EXT:staffholiday/Resources/Private/Language/locallang_flexform.xlf:main.view.2</numIndex>
+                                        <numIndex index="1">Holiday->list;</numIndex>
+                                    </numIndex>
+                                </items>
+                                <maxitems>1</maxitems>
+                                <size>1</size>
+                            </config>
+                        </TCEforms>
+                    </switchableControllerActions>
+                </el>
+            </ROOT>
+        </main>
+        <list>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>LLL:EXT:staffholiday/Resources/Private/Language/locallang_flexform.xlf:list.title</sheetTitle>
+                    <displayCond><![CDATA[FIELD:main.switchableControllerActions:=:Holiday->list;]]></displayCond>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <settings.list.displayNotice>
+                        <TCEforms>
+                            <label>LLL:EXT:staffholiday/Resources/Private/Language/locallang_flexform.xlf:list.displayNotice</label>
+                            <config>
+                                <type>check</type>
+                                <default>1</default>
+                            </config>
+                        </TCEforms>
+                    </settings.list.displayNotice>
+                    <settings.list.user>
+                        <TCEforms>
+                            <label>LLL:EXT:staffholiday/Resources/Private/Language/locallang_flexform.xlf:list.show.user</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">LLL:EXT:staffholiday/Resources/Private/Language/locallang_flexform.xlf:pleaseChoose</numIndex>
+                                        <numIndex index="1"></numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">LLL:EXT:staffholiday/Resources/Private/Language/locallang_flexform.xlf:list.show.user.1</numIndex>
+                                        <numIndex index="1">[this]</numIndex>
+                                    </numIndex>
+                                    <numIndex index="2" type="array">
+                                        <numIndex index="0">LLL:EXT:staffholiday/Resources/Private/Language/locallang_flexform.xlf:list.show.user.2</numIndex>
+                                        <numIndex index="1"></numIndex>
+                                    </numIndex>
+                                </items>
+                                <maxitems>1</maxitems>
+                                <size>1</size>
+                                <minitems>0</minitems>
+                            </config>
+                        </TCEforms>
+                    </settings.list.user>
+                    <settings.list.usergroup>
+                        <TCEforms>
+                            <label>LLL:EXT:staffholiday/Resources/Private/Language/locallang_flexform.xlf:list.usergroup</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectMultipleSideBySide</renderType>
+                                <maxitems>100</maxitems>
+                                <size>4</size>
+                                <autoSizeMax>20</autoSizeMax>
+                                <minitems>0</minitems>
+                                <foreign_table>fe_groups</foreign_table>
+                                <foreign_table_where>AND fe_groups.deleted = 0 AND fe_groups.hidden = 0 order by fe_groups.title</foreign_table_where>
+                                <allowNonIdValues>1</allowNonIdValues>
+                            </config>
+                        </TCEforms>
+                    </settings.list.usergroup>
+                    <settings.list.excludeExpiredPlans>
+                        <TCEforms>
+                            <label>LLL:EXT:staffholiday/Resources/Private/Language/locallang_flexform.xlf:list.excludeExpiredPlans</label>
+                            <config>
+                                <type>check</type>
+                                <default>0</default>
+                            </config>
+                        </TCEforms>
+                    </settings.list.excludeExpiredPlans>
+                    <settings.list.filterActivate>
+                        <TCEforms>
+                            <label>LLL:EXT:staffholiday/Resources/Private/Language/locallang_flexform.xlf:list.filter</label>
+                            <config>
+                                <type>check</type>
+                                <default>0</default>
+                            </config>
+                        </TCEforms>
+                    </settings.list.filterActivate>
+                    <settings.list.limit>
+                        <TCEforms>
+                            <label>LLL:EXT:staffholiday/Resources/Private/Language/locallang_flexform.xlf:list.limit</label>
+                            <config>
+                                <type>input</type>
+                                <eval>trim,int</eval>
+                                <size>4</size>
+                            </config>
+                        </TCEforms>
+                    </settings.list.limit>
+                    <settings.list.orderby>
+                        <TCEforms>
+                            <label>LLL:EXT:staffholiday/Resources/Private/Language/locallang_flexform.xlf:list.orderby</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">LLL:EXT:staffholiday/Resources/Private/Language/locallang_flexform.xlf:list.orderby.0</numIndex>
+                                        <numIndex index="1">holidayBegin</numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">LLL:EXT:staffholiday/Resources/Private/Language/locallang_flexform.xlf:list.orderby.1</numIndex>
+                                        <numIndex index="1">holidayEnd</numIndex>
+                                    </numIndex>
+                                    <numIndex index="2" type="array">
+                                        <numIndex index="0">LLL:EXT:staffholiday/Resources/Private/Language/locallang_flexform.xlf:list.orderby.2</numIndex>
+                                        <numIndex index="1">user.lastName</numIndex>
+                                    </numIndex>
+                                </items>
+                                <maxitems>1</maxitems>
+                                <size>1</size>
+                            </config>
+                        </TCEforms>
+                    </settings.list.orderby>
+                    <settings.list.sorting>
+                        <TCEforms>
+                            <label>LLL:EXT:staffholiday/Resources/Private/Language/locallang_flexform.xlf:list.sorting</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">LLL:EXT:staffholiday/Resources/Private/Language/locallang_flexform.xlf:list.sorting.0</numIndex>
+                                        <numIndex index="1">asc</numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">LLL:EXT:staffholiday/Resources/Private/Language/locallang_flexform.xlf:list.sorting.1</numIndex>
+                                        <numIndex index="1">desc</numIndex>
+                                    </numIndex>
+                                </items>
+                                <maxitems>1</maxitems>
+                                <size>1</size>
+                            </config>
+                        </TCEforms>
+                    </settings.list.sorting>
+                </el>
+            </ROOT>
+        </list>
+        <new>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>LLL:EXT:staffholiday/Resources/Private/Language/locallang_flexform.xlf:new.title</sheetTitle>
+                    <displayCond><![CDATA[FIELD:main.switchableControllerActions:=:New->new;New->create;New->createStatus;New->confirmCreateRequest;]]></displayCond>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <settings.new.confirmByAdmin>
+                        <TCEforms>
+                            <label>LLL:EXT:staffholiday/Resources/Private/Language/locallang_flexform.xlf:new.confirmByAdmin</label>
+                            <config>
+                                <type>check</type>
+                                <default>1</default>
+                            </config>
+                        </TCEforms>
+                    </settings.new.confirmByAdmin>
+                </el>
+            </ROOT>
+        </new>
+    </sheets>
+</T3DataStructure>

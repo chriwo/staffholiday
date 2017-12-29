@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2017-08-16T15:49:07Z"
+          product-name="staffholiday">
+        <header/>
+        <body>
+
+            <trans-unit id="tx_staffholiday_domain_model_plan.status.101">
+                <source>Pending</source>
+            </trans-unit>
+            <trans-unit id="tx_staffholiday_domain_model_plan.status.102">
+                <source>Success</source>
+            </trans-unit>
+            <trans-unit id="tx_staffholiday_domain_model_plan.status.103">
+                <source>Refused</source>
+            </trans-unit>
+            <trans-unit id="tx_staffholiday_domain_model_plan.status.all">
+                <source>All</source>
+            </trans-unit>
+
+            <trans-unit id="format-date">
+                <source>Y-m-d</source>
+            </trans-unit>
+            <trans-unit id="format-datetime">
+                <source>Y-m-d H:i:s</source>
+            </trans-unit>
+            <trans-unit id="filterSearchWordPlaceholder">
+                <source>Staff</source>
+            </trans-unit>
+            <trans-unit id="filterYearPlaceholder">
+                <source>All years</source>
+            </trans-unit>
+            <trans-unit id="filterSubmit">
+                <source>Search</source>
+            </trans-unit>
+            <trans-unit id="no-entries-found">
+                <source>No holiday plans available</source>
+            </trans-unit>
+            <trans-unit id="notLoggedIn">
+                <source>Bitte melden Sie sich zuvor an</source>
+            </trans-unit>
+
+            <trans-unit id="tx_staffholiday_domain_model_plan.staff">
+                <source>Staff</source>
+            </trans-unit>
+            <trans-unit id="tx_staffholiday_domain_model_plan.holiday_period">
+                <source>Holiday period</source>
+            </trans-unit>
+            <trans-unit id="tx_staffholiday_domain_model_plan.holiday_begin">
+                <source>Holiday begin</source>
+            </trans-unit>
+            <trans-unit id="tx_staffholiday_domain_model_plan.holiday_end">
+                <source>Holiday end</source>
+            </trans-unit>
+            <trans-unit id="tx_staffholiday_domain_model_plan.notice">
+                <source>Notice</source>
+            </trans-unit>
+            <trans-unit id="submitNew">
+                <source>Submit vacation</source>
+            </trans-unit>
+            <trans-unit id="create">
+                <source>Vacation successfully created</source>
+            </trans-unit>
+            <trans-unit id="createRequestWaitingForAdminConfirm">
+                <source>Your holiday application has been sent for review</source>
+            </trans-unit>
+            <trans-unit id="emailCreateAdminConfirmationSalutation">
+                <source>Dear admin,</source>
+            </trans-unit>
+            <trans-unit id="emailCreateAdminConfirmationSubject">
+                <source>Vacation for leave</source>
+            </trans-unit>
+            <trans-unit id="emailCreateAdminConfirmationText1">
+                <source>Please confirm vacation of %1$s by clicking the following link:</source>
+            </trans-unit>
+            <trans-unit id="emailCreateAdminConfirmationLinkConfirm">
+                <source>Confirm vacation</source>
+            </trans-unit>
+            <trans-unit id="emailCreateAdminConfirmationText2">
+                <source>The following link declines the vacation from %1$s:</source>
+            </trans-unit>
+            <trans-unit id="emailCreateAdminConfirmationLinkConfirmRefused">
+                <source>Reject vacation</source>
+            </trans-unit>
+            <trans-unit id="emailCreateUserNotifySubject">
+                <source>Your vacation was confirmed</source>
+            </trans-unit>
+            <trans-unit id="emailCreateUserNotifySalutation">
+                <source>Dear</source>
+            </trans-unit>
+            <trans-unit id="emailCreateUserNotifyText1">
+                <source>Your holiday application has been checked and approved. We wish you pleasant holidays.</source>
+            </trans-unit>
+            <trans-unit id="createPlanSuccess">
+                <target>Holiday application successfully approved</target>
+            </trans-unit>
+            <trans-unit id="createPlanCanceled">
+                <source>Vacation successfully canceled</source>
+            </trans-unit>
+            <trans-unit id="createFailedPlan">
+                <source>Plan creation failed</source>
+            </trans-unit>
+            <trans-unit id="emailCreateUserNotifyRefusedSubject">
+                <source>Holiday application canceld</source>
+            </trans-unit>
+            <trans-unit id="emailCreateUserNotifyRefusedSalutation">
+                <source>Dear</source>
+            </trans-unit>
+            <trans-unit id="emailCreateUserNotifyRefusedText1">
+                <source>Your holiday application has been checked and canceld.</source>
+            </trans-unit>
+
+        </body>
+    </file>
+</xliff>

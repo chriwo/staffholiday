@@ -1,0 +1,41 @@
+{namespace chriwo=ChriWo\Staffholiday\ViewHelpers}
+<html xmlns:f="https://xsd.helhum.io/ns/typo3/cms-fluid/master/ViewHelpers"
+			data-namespace-typo3-fluid="true">
+
+	<tr data-status="{planItem.status}">
+		<td>
+			<div class="media">
+				<div class="pull-left">
+					<f:image src="{uploadFolder}/{chriwo:firstImage(string:'{planItem.user.image}')}"
+									 class="media-photo"
+									 width="{settings.list.image.width}"
+									 height="{settings.list.image.height}"/>
+				</div>
+
+				<div class="media-body">
+					<h4 class="title">
+						{planItem.user.firstName} {planItem.user.lastName}
+						<div class="btn-group pull-right">
+							<button type="button" class="btn tx-staffholiday_status-{planItem.status}">
+								<f:translate key="tx_staffholiday_domain_model_plan.status.{planItem.status}"/>
+							</button>
+						</div>
+					</h4>
+
+					<p class="summary">
+						{planItem.holidayBegin -> f:format.date(format:'{format}')} - {planItem.holidayEnd ->
+						f:format.date(format:'{format}')}
+					</p>
+					<f:if condition="{settings.list.displayNotice}">
+						<f:if condition="{planItem.notice}">
+							<p class="summary-notice">
+								{planItem.notice -> f:format.raw()}
+							</p>
+						</f:if>
+					</f:if>
+				</div>
+			</div>
+		</td>
+	</tr>
+
+</html>

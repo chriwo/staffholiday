@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2017-08-16T15:49:07Z"
+          product-name="staffholiday">
+        <header/>
+        <body>
+
+            <trans-unit id="plugin.title">
+                <source>Vacation requests</source>
+            </trans-unit>
+
+            <trans-unit id="pleaseChoose">
+                <source>Please choose an option</source>
+            </trans-unit>
+            <trans-unit id="main.title">
+                <source>General settings</source>
+            </trans-unit>
+            <trans-unit id="main.view">
+                <source>Output options</source>
+            </trans-unit>
+            <trans-unit id="main.view.0">
+                <source>Create new holiday request</source>
+            </trans-unit>
+            <trans-unit id="main.view.1">
+                <source>Edit an existing holiday plan</source>
+            </trans-unit>
+            <trans-unit id="main.view.2">
+                <source>List all holiday vacations</source>
+            </trans-unit>
+            <trans-unit id="list.title">
+                <source>List view</source>
+            </trans-unit>
+            <trans-unit id="list.displayNotice">
+                <source>Show notice to holiday vacation</source>
+            </trans-unit>
+            <trans-unit id="list.show.user">
+                <source>To show staff</source>
+            </trans-unit>
+            <trans-unit id="list.show.user.1">
+                <source>[Current logged in staff]</source>
+            </trans-unit>
+            <trans-unit id="list.show.user.2">
+                <source>All staffs</source>
+            </trans-unit>
+            <trans-unit id="list.excludeExpiredPlans">
+                <source>Don't show expired vacations</source>
+            </trans-unit>
+            <trans-unit id="list.filter">
+                <source>Show filter</source>
+            </trans-unit>
+            <trans-unit id="list.limit">
+                <source>Limit</source>
+            </trans-unit>
+            <trans-unit id="list.orderby">
+                <source>Order entries by</source>
+            </trans-unit>
+            <trans-unit id="list.orderby.0">
+                <source>Holiday begin</source>
+            </trans-unit>
+            <trans-unit id="list.orderby.1">
+                <source>Holiday end</source>
+            </trans-unit>
+            <trans-unit id="list.orderby.2">
+                <source>Person</source>
+            </trans-unit>
+            <trans-unit id="list.sorting">
+                <source>Sorting entries</source>
+            </trans-unit>
+            <trans-unit id="list.sorting.0">
+                <source>Ascending</source>
+            </trans-unit>
+            <trans-unit id="list.sorting.1">
+                <source>Descending</source>
+            </trans-unit>
+            <trans-unit id="list.usergroup">
+                <source>Display staff from usergroup (empty = show all)</source>
+            </trans-unit>
+
+            <trans-unit id="new.title">
+                <source>New</source>
+            </trans-unit>
+            <trans-unit id="new.confirmByAdmin">
+                <source>Application must be approved</source>
+            </trans-unit>
+
+        </body>
+    </file>
+</xliff>

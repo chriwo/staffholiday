@@ -1,0 +1,59 @@
+.. |img-plugin-ts|      image:: /Images/Administration/BE-Add-static-TypoScript.png
+.. :align: left
+.. :border: 0
+.. :name: create1
+.. :vspace: 20
+
+.. |img-extensionmanager-configuration|      image:: /Images/Administration/BE-ExtensionManager-configuration.png
+.. :align: left
+.. :border: 0
+.. :name: img-extensionmanager-configuration
+.. :vspace: 20
+
+.. |plugin-list-general|      image:: /Images/Plugin/BE-Plugin-List-general.png
+.. :align: left
+.. :border: 0
+.. :name: plugin-list-general
+.. :vspace: 20
+
+.. |plugin-list-options|      image:: /Images/Plugin/BE-Plugin-List-options.png
+.. :align: left
+.. :border: 0
+.. :name: plugin-list-options
+.. :vspace: 20
+
+.. |plugin-new-general|      image:: /Images/Plugin/BE-Plugin-New-general.png
+.. :align: left
+.. :border: 0
+.. :name: plugin-new-general
+.. :vspace: 20
+
+.. |plugin-new-options|      image:: /Images/Plugin/BE-Plugin-New-options.png
+.. :align: left
+.. :border: 0
+.. :name: plugin-new-options
+.. :vspace: 20
+
+.. |be-records-vacations|      image:: /Images/Records/Be-Records.png
+.. :align: left
+.. :border: 0
+.. :name: be-records-vacations
+.. :vspace: 20
+
+.. |fe-show-all-vacations|      image:: /Images/Frontend/FE-Show-vacations-of-all.png
+.. :align: left
+.. :border: 0
+.. :name: fe-show-all-vacations
+.. :vspace: 20
+
+.. |fe-show-user-vacations|      image:: /Images/Frontend/FE-Show-vacations-of-current-user.png
+.. :align: left
+.. :border: 0
+.. :name: fe-show-user-vacations
+.. :vspace: 20
+
+.. |fe-create-new-vacation|      image:: /Images/Frontend/FE-Create-new-vacation.png
+.. :align: left
+.. :border: 0
+.. :name: fe-create-new-vacation
+.. :vspace: 20

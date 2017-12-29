@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2017-08-16T15:49:07Z"
+          product-name="staffholiday">
+        <header/>
+        <body>
+
+<!-- tx_staffholiday_domain_model_log -->
+            <trans-unit id="tx_staffholiday_domain_model_log">
+                <target>Mitarbeiterurlaub Log</target>
+            </trans-unit>
+            <trans-unit id="tx_staffholiday_domain_model_log.title">
+                <target>Titel</target>
+            </trans-unit>
+            <trans-unit id="tx_staffholiday_domain_model_log.crdate">
+                <target>Zeit</target>
+            </trans-unit>
+            <trans-unit id="tx_staffholiday_domain_model_log.state">
+                <target>Status</target>
+            </trans-unit>
+            <trans-unit id="tx_staffholiday_domain_model_log.state.100">
+                <target>Urlaubsanfrage</target>
+            </trans-unit>
+            <trans-unit id="tx_staffholiday_domain_model_log.state.101">
+                <target>Neue Urlaubsanfrage</target>
+            </trans-unit>
+            <trans-unit id="tx_staffholiday_domain_model_log.state.102">
+                <target>Urlaub durch Admin bestätigt</target>
+            </trans-unit>
+            <trans-unit id="tx_staffholiday_domain_model_log.state.103">
+                <target>Urlaub vom Mitarbeiter abgelehnt</target>
+            </trans-unit>
+            <trans-unit id="tx_staffholiday_domain_model_log.state.104">
+                <target>Urlaub vom Admin abgelehnt</target>
+            </trans-unit>
+            <trans-unit id="tx_staffholiday_domain_model_log.state.105">
+                <target>Holiday creation request</target>
+            </trans-unit>
+            <trans-unit id="tx_staffholiday_domain_model_log.state.200">
+                <target>Urlaubsanfrage aktualisiert</target>
+            </trans-unit>
+            <trans-unit id="tx_staffholiday_domain_model_log.state.201">
+                <target>Urlaub aktualisiert</target>
+            </trans-unit>
+            <trans-unit id="tx_staffholiday_domain_model_log.state.300">
+                <target>Urlaubanfrage löschen</target>
+            </trans-unit>
+            <trans-unit id="tx_staffholiday_domain_model_log.state.301">
+                <target>Urlaub gelöscht</target>
+            </trans-unit>
+            <trans-unit id="tx_staffholiday_domain_model_log.plan">
+                <target>Urlaubsantrag</target>
+            </trans-unit>
+
+<!-- tx_staffholiday_domain_model_log -->
+            <trans-unit id="tx_staffholiday_domain_model_plan">
+                <target>Mitarbeiterurlaub</target>
+            </trans-unit>
+            <trans-unit id="tx_staffholiday_domain_model_plan.user">
+                <target>Mitarbeiter</target>
+            </trans-unit>
+            <trans-unit id="tx_staffholiday_domain_model_plan.crdate">
+                <target>Eingereicht am:</target>
+            </trans-unit>
+            <trans-unit id="tx_staffholiday_domain_model_plan.holiday_begin">
+                <target>Urlaubsbeginn</target>
+            </trans-unit>
+            <trans-unit id="tx_staffholiday_domain_model_plan.holiday_end">
+                <target>Urlaubsende</target>
+            </trans-unit>
+            <trans-unit id="tx_staffholiday_domain_model_plan.notice">
+                <target>Bemerkung</target>
+            </trans-unit>
+            <trans-unit id="tx_staffholiday_domain_model_plan.status">
+                <target>Status</target>
+            </trans-unit>
+            <trans-unit id="tx_staffholiday_domain_model_plan.status.101">
+                <target>Offen</target>
+            </trans-unit>
+            <trans-unit id="tx_staffholiday_domain_model_plan.status.102">
+                <target>Genehmigt</target>
+            </trans-unit>
+            <trans-unit id="tx_staffholiday_domain_model_plan.status.103">
+                <target>Abgelehnt</target>
+            </trans-unit>
+            <trans-unit id="tx_staffholiday_domain_model_plan.log">
+                <target>Log</target>
+            </trans-unit>
+
+<!-- fe_users -->
+            <trans-unit id="fe_users.holiday_plan">
+                <target>Urlaubsanträge</target>
+            </trans-unit>
+            <trans-unit id="fe_users.tab">
+                <target>Urlaubsanträge</target>
+            </trans-unit>
+
+        </body>
+    </file>
+</xliff>

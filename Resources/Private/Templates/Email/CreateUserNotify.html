@@ -1,0 +1,24 @@
+<html xmlns:f="https://xsd.helhum.io/ns/typo3/cms-fluid/master/ViewHelpers"
+	  data-namespace-typo3-fluid="true">
+
+	<f:layout name="Email" />
+
+	<f:section name="main">
+		<p><f:translate key="emailCreateUserNotifySalutation" /> {plan.user.firstName} {plan.user.lastName},</p>
+
+		<p><f:translate key="emailCreateUserNotifyText1" /></p>
+
+		<table border="1" cellpadding="2" cellspacing="2">
+			<tr>
+				<td>
+					<f:translate key="tx_staffholiday_domain_model_plan.holiday_period"/>
+				</td>
+				<td>
+					{plan.holidayBegin -> f:format.date(format:"{f:translate(key:'{dateTimeSetting}')}")}
+					- {plan.holidayEnd -> f:format.date(format:"{f:translate(key:'{dateTimeSetting}')}")}
+				</td>
+			</tr>
+		</table>
+	</f:section>
+
+</html>

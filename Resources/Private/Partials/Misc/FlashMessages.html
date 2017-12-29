@@ -1,0 +1,16 @@
+<html xmlns:f="https://xsd.helhum.io/ns/typo3/cms-fluid/master/ViewHelpers"
+			data-namespace-typo3-fluid="true">
+
+	<f:flashMessages as="flashMessages">
+		<div class="staffholiday_status">
+			<div class="staffholiday_flashmessages">
+				<f:for each="{flashMessages}" as="flashMessage">
+					<div class="typo3-message message-{flashMessage.severity}">
+						<div class="message-body">{flashMessage.message}</div>
+					</div>
+				</f:for>
+			</div>
+		</div>
+	</f:flashMessages>
+
+</html>

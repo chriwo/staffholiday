@@ -1,0 +1,9 @@
+Icon "tx_staffholiday_domain_model_log" made by
+    - Freepik (http://www.freepik.com)
+    - from Flaticon (https://www.flaticon.com/)
+    - is licensed by CC 3.0 BY (http://creativecommons.org/licenses/by/3.0/)
+
+Icon "tx_staffholiday_domain_model_plan" made by
+    - Freepik (http://www.freepik.com)
+    - from Flaticon (https://www.flaticon.com/)
+    - is licensed by CC 3.0 BY (http://creativecommons.org/licenses/by/3.0/)

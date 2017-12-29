@@ -1,0 +1,37 @@
+{namespace chriwo=ChriWo\Staffholiday\ViewHelpers}
+<html xmlns:f="https://xsd.helhum.io/ns/typo3/cms-fluid/master/ViewHelpers"
+			data-namespace-typo3-fluid="true">
+
+	<f:if condition="{settings.list.filterActivate}">
+		<div class="tx-staffholiday_list_searchform col-xs-5">
+			<f:form name="filter" class="form-inline" object="{filter}">
+
+				<div class="form-group">
+					<label class="sr-only" for="tx-staffholiday_year">Jahr</label>
+					<f:form.select
+						id="tx-staffholiday_year"
+						property="year"
+						options="{chriwo:form.yearsPlan(excludeExpired:'{settings.list.excludeExpiredPlans}')}"
+						value="{filter.year}"
+						class="form-control"/>
+				</div>
+
+				<f:if condition="{settings.list.user} != '[this]'">
+					<div class="form-group">
+						<label class="sr-only" for="tx-staffholiday_searchword">Suchbegriff</label>
+						<f:form.textfield
+							id="tx-staffholiday_searchword"
+							property="searchword"
+							placeholder="{f:translate(key:'filterSearchWordPlaceholder')}"
+							class="form-control"/>
+					</div>
+				</f:if>
+
+				<div class="tx-staffholiday_fieldset tx-staffholiday_submit form-group">
+					<f:form.submit value="{f:translate(key:'filterSubmit')}" class="btn btn-primary"/>
+				</div>
+			</f:form>
+		</div>
+	</f:if>
+
+</html>

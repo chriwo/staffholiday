@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2017-08-16T15:49:07Z"
+          product-name="staffholiday">
+        <header/>
+        <body>
+
+            <trans-unit id="tx_staffholiday_domain_model_plan.status.101">
+                <target>Offen</target>
+            </trans-unit>
+            <trans-unit id="tx_staffholiday_domain_model_plan.status.102">
+                <target>Genehmigt</target>
+            </trans-unit>
+            <trans-unit id="tx_staffholiday_domain_model_plan.status.103">
+                <target>Abgelehnt</target>
+            </trans-unit>
+            <trans-unit id="tx_staffholiday_domain_model_plan.status.all">
+                <target>Alle</target>
+            </trans-unit>
+
+            <trans-unit id="format-date">
+                <target>d.m.Y</target>
+            </trans-unit>
+            <trans-unit id="format-datetime">
+                <target>d.m.Y H:i:s</target>
+            </trans-unit>
+
+            <trans-unit id="filterSearchWordPlaceholder">
+                <target>Mitarbeiter</target>
+            </trans-unit>
+            <trans-unit id="filterYearPlaceholder">
+                <target>Alle Jahre</target>
+            </trans-unit>
+            <trans-unit id="filterSubmit">
+                <target>Filtern</target>
+            </trans-unit>
+            <trans-unit id="no-entries-found">
+                <target>Kein Urlaubsanträge verfügbar</target>
+            </trans-unit>
+            <trans-unit id="notLoggedIn">
+                <target>Bitte melden Sie sich zuvor an</target>
+            </trans-unit>
+
+            <trans-unit id="tx_staffholiday_domain_model_plan.staff">
+                <target>Mitarbeiter</target>
+            </trans-unit>
+            <trans-unit id="tx_staffholiday_domain_model_plan.holiday_period">
+                <target>Urlaubszeitraum</target>
+            </trans-unit>
+            <trans-unit id="tx_staffholiday_domain_model_plan.holiday_begin">
+                <target>Urlaubsbeginn</target>
+            </trans-unit>
+            <trans-unit id="tx_staffholiday_domain_model_plan.holiday_end">
+                <target>Urlaubsende</target>
+            </trans-unit>
+            <trans-unit id="tx_staffholiday_domain_model_plan.notice">
+                <target>Mitteilung</target>
+            </trans-unit>
+            <trans-unit id="submitNew">
+                <target>Urlaub einreichen</target>
+            </trans-unit>
+            <trans-unit id="create">
+                <target>Urlaubsantrag erfolgreich erstellt</target>
+            </trans-unit>
+            <trans-unit id="createRequestWaitingForAdminConfirm">
+                <target>Ihr Urlaubsantrag wurde zur Überprüfung verschickt</target>
+            </trans-unit>
+            <trans-unit id="emailCreateAdminConfirmationSubject">
+                <target>Urlaubsantrag zur Prüfung</target>
+            </trans-unit>
+            <trans-unit id="emailCreateAdminConfirmationSalutation">
+                <target>Hallo Admin,</target>
+            </trans-unit>
+            <trans-unit id="emailCreateAdminConfirmationText1">
+                <target>Bitte bestätige den Urlaubsantrag von %1$s durch Klick auf den nachfolgenden Link:</target>
+            </trans-unit>
+            <trans-unit id="emailCreateAdminConfirmationLinkConfirm">
+                <target>Urlaub genehmigen</target>
+            </trans-unit>
+            <trans-unit id="emailCreateAdminConfirmationText2">
+                <target>Durch nachfolgenden Link wird der Urlaubsantrag von %1$s abgelehnt:</target>
+            </trans-unit>
+            <trans-unit id="emailCreateAdminConfirmationLinkConfirmRefused">
+                <target>Urlaub ablehnen</target>
+            </trans-unit>
+            <trans-unit id="emailCreateUserNotifySubject">
+                <target>Dein Urlaubsantrag wurde genehmigt</target>
+            </trans-unit>
+            <trans-unit id="emailCreateUserNotifySalutation">
+                <target>Hallo</target>
+            </trans-unit>
+            <trans-unit id="emailCreateUserNotifyText1">
+                <target>dein Urlaubsantrag wurde überprüft und genehmigt. Wir wünschen dir angenehme Ferien.</target>
+            </trans-unit>
+            <trans-unit id="createPlanSuccess">
+                <target>Urlaubsantrag erfolgreich genehmigt</target>
+            </trans-unit>
+            <trans-unit id="createPlanCanceled">
+                <target>Urlaub erfolgreich abgelehnt</target>
+            </trans-unit>
+            <trans-unit id="createFailedPlan">
+                <target>Urlaubsantrag konnte nicht aktualisiert werden</target>
+            </trans-unit>
+            <trans-unit id="emailCreateUserNotifyRefusedSubject">
+                <target>Urlaubsantrag abgelehnt</target>
+            </trans-unit>
+            <trans-unit id="emailCreateUserNotifyRefusedSalutation">
+                <target>Hallo</target>
+            </trans-unit>
+            <trans-unit id="emailCreateUserNotifyRefusedText1">
+                <target>dein Urlaubsantrag wurde überprüft und abgelehnt.</target>
+            </trans-unit>
+
+        </body>
+    </file>
+</xliff>

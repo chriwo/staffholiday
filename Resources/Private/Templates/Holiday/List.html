@@ -1,0 +1,40 @@
+<html xmlns:f="https://xsd.helhum.io/ns/typo3/cms-fluid/master/ViewHelpers"
+			data-namespace-typo3-fluid="true">
+
+	<f:layout name="Default"/>
+
+	<f:section name="Main">
+
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<div class="tx-staffholiday_list_filter row">
+					<f:render partial="Holiday/Searchform" arguments="{_all}"/>
+					<f:render partial="Holiday/OnOffSwitch"/>
+				</div>
+
+				<div class="table-container">
+					<f:if condition="{holidayPlans}">
+						<f:then>
+							<table class="table tx-staffholiday_table-filter">
+								<tbody>
+								<f:for each="{holidayPlans}" as="planItem">
+									<f:render partial="Holiday/PlanItem" arguments="{_all}"/>
+								</f:for>
+								</tbody>
+							</table>
+						</f:then>
+						<f:else>
+							<div class="tx-staffholiday_noentries">
+								<p class="bg-info">
+									<f:translate key="no-entries-found"/>
+								</p>
+							</div>
+						</f:else>
+					</f:if>
+				</div>
+			</div>
+		</div>
+
+	</f:section>
+
+</html>

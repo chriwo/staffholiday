@@ -1,0 +1,22 @@
+plugin.tx_staffholiday {
+    view {
+        # cat=plugin.tx_staffholiday/file; type=string; label= Path to layout root (FE)
+        layoutRootPath = EXT:staffholiday/Resources/Private/Layouts
+
+        # cat=plugin.tx_staffholiday/file; type=string; label= Path to partial root (FE)
+        partialRootPath = EXT:staffholiday/Resources/Private/Partials
+
+        # cat=plugin.tx_staffholiday/file; type=string; label= Path to template root (FE)
+        templateRootPath = EXT:staffholiday/Resources/Private/Templates
+    }
+
+    settings {
+        mailing {
+            # cat=plugin.tx_staffholiday/string; type=string; label= Email address of sender
+            senderEmail = noreply@domain.com
+
+            # cat=plugin.tx_staffholiday/string; type=string; label= Name of the sender
+            senderName = Staff holiday planner
+        }
+    }
+}

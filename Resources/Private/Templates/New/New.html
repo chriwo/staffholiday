@@ -1,0 +1,62 @@
+<html xmlns:f="https://xsd.helhum.io/ns/typo3/cms-fluid/master/ViewHelpers"
+			data-namespace-typo3-fluid="true">
+
+	<f:layout name="Default"/>
+
+	<f:section name="Main">
+
+		<f:render partial="Misc/FlashMessages" arguments="{_all}"/>
+		<f:render partial="Misc/FormErrors" arguments="{object:User}"/>
+
+		<f:if condition="{user}">
+			<f:then>
+				<div class="panel panel-default">
+
+					<div class="panel-body">
+						<div class="row">
+							<f:form name="plan" object="plan" action="create">
+								<div class="hidden">
+									<f:form.hidden property="user" value="{user}"/>
+								</div>
+								<fieldset>
+									<div class="col-xs-12 col-md-4">
+										<div class="form-group">
+											<label for="tx-holiday_holidayBegin">{f:translate(key:'tx_staffholiday_domain_model_plan.holiday_begin')}</label>
+											<f:form.textfield property="holidayBegin" class="form-control" type="{dateTimeSetting}"
+																				id="tx-holiday_holidayBegin"/>
+										</div>
+										<div class="form-group">
+											<label for="tx-holiday_holidayEnd">{f:translate(key:'tx_staffholiday_domain_model_plan.holiday_end')}</label>
+											<f:form.textfield property="holidayEnd" class="form-control" type="{dateTimeSetting}"
+																				id="tx-holiday_holidayEnd"/>
+										</div>
+									</div>
+									<div class="col-xs-12 col-md-8">
+										<div class="form-group">
+											<label
+												for="tx-holiday_holidayNotice">{f:translate(key:'tx_staffholiday_domain_model_plan.notice')}</label>
+											<f:form.textarea class="form-control" rows="4" property="notice" id="tx-holiday_holidayNotice"/>
+										</div>
+										<div class="form-group">
+											<f:form.submit class="btn btn-primary btn-large" value="{f:translate(key:'submitNew')}"/>
+										</div>
+									</div>
+								</fieldset>
+							</f:form>
+						</div>
+					</div>
+
+				</div>
+			</f:then>
+			<f:else>
+				<div class="tx-staffholiday_notloggedin">
+					<p class="bg-info">
+						<f:translate key="notLoggedIn"/>
+					</p>
+				</div>
+			</f:else>
+		</f:if>
+
+	</f:section>
+
+</html>

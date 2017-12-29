@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2017-08-16T15:49:07Z"
+          product-name="staffholiday">
+        <header/>
+        <body>
+
+<!-- tx_staffholiday_domain_model_log -->
+            <trans-unit id="tx_staffholiday_domain_model_log">
+                <source>Staff holiday log</source>
+            </trans-unit>
+            <trans-unit id="tx_staffholiday_domain_model_log.title">
+                <source>Title</source>
+            </trans-unit>
+            <trans-unit id="tx_staffholiday_domain_model_log.crdate">
+                <source>Time</source>
+            </trans-unit>
+            <trans-unit id="tx_staffholiday_domain_model_log.state">
+                <source>State</source>
+            </trans-unit>
+            <trans-unit id="tx_staffholiday_domain_model_log.state.100">
+                <source>Holiday request</source>
+            </trans-unit>
+            <trans-unit id="tx_staffholiday_domain_model_log.state.101">
+                <source>New holiday</source>
+            </trans-unit>
+            <trans-unit id="tx_staffholiday_domain_model_log.state.102">
+                <source>Holiday confirmed by admin</source>
+            </trans-unit>
+            <trans-unit id="tx_staffholiday_domain_model_log.state.103">
+                <source>Holiday refused by user</source>
+            </trans-unit>
+            <trans-unit id="tx_staffholiday_domain_model_log.state.104">
+                <source>Holiday refused by admin</source>
+            </trans-unit>
+            <trans-unit id="tx_staffholiday_domain_model_log.state.105">
+                <source>Holiday creation request</source>
+            </trans-unit>
+            <trans-unit id="tx_staffholiday_domain_model_log.state.200">
+                <source>Holiday Update</source>
+            </trans-unit>
+            <trans-unit id="tx_staffholiday_domain_model_log.state.201">
+                <source>Holiday updated</source>
+            </trans-unit>
+            <trans-unit id="tx_staffholiday_domain_model_log.state.300">
+                <source>Holiday Delete</source>
+            </trans-unit>
+            <trans-unit id="tx_staffholiday_domain_model_log.state.301">
+                <source>Holiday deleted</source>
+            </trans-unit>
+            <trans-unit id="tx_staffholiday_domain_model_log.plan">
+                <source>Plan</source>
+            </trans-unit>
+
+<!-- tx_staffholiday_domain_model_log -->
+            <trans-unit id="tx_staffholiday_domain_model_plan">
+                <source>Staff holiday</source>
+            </trans-unit>
+            <trans-unit id="tx_staffholiday_domain_model_plan.user">
+                <source>Staff</source>
+            </trans-unit>
+            <trans-unit id="tx_staffholiday_domain_model_plan.crdate">
+                <source>Filed on:</source>
+            </trans-unit>
+            <trans-unit id="tx_staffholiday_domain_model_plan.holiday_begin">
+                <source>Holiday begin</source>
+            </trans-unit>
+            <trans-unit id="tx_staffholiday_domain_model_plan.holiday_end">
+                <source>Holiday end</source>
+            </trans-unit>
+            <trans-unit id="tx_staffholiday_domain_model_plan.notice">
+                <source>Notice</source>
+            </trans-unit>
+            <trans-unit id="tx_staffholiday_domain_model_plan.status">
+                <source>Status</source>
+            </trans-unit>
+            <trans-unit id="tx_staffholiday_domain_model_plan.status.101">
+                <source>Pending</source>
+            </trans-unit>
+            <trans-unit id="tx_staffholiday_domain_model_plan.status.102">
+                <source>Success</source>
+            </trans-unit>
+            <trans-unit id="tx_staffholiday_domain_model_plan.status.103">
+                <source>Refused</source>
+            </trans-unit>
+            <trans-unit id="tx_staffholiday_domain_model_plan.log">
+                <source>Log</source>
+            </trans-unit>
+
+<!-- fe_users -->
+            <trans-unit id="fe_users.holiday_plan">
+                <source>Vacation requests</source>
+            </trans-unit>
+            <trans-unit id="fe_users.tab">
+                <source>Vacation requests</source>
+            </trans-unit>
+
+        </body>
+    </file>
+</xliff>

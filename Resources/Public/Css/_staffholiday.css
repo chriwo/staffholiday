@@ -1,0 +1,226 @@
+.tx-staffholiday .tx-staffholiday_status-101 {
+  background-color: #f0ad4e;
+  border-color: #efa945; }
+  .tx-staffholiday .tx-staffholiday_status-101.active {
+    background-color: #c77c11;
+    border-color: #f4c37d;
+    outline: 0;
+    -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05); }
+.tx-staffholiday .tx-staffholiday_status-102 {
+  background-color: #5cb85c;
+  border-color: #55b555; }
+  .tx-staffholiday .tx-staffholiday_status-102.active {
+    background-color: #357935;
+    border-color: #80c780;
+    outline: 0;
+    -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05); }
+.tx-staffholiday .tx-staffholiday_status-103 {
+  background-color: #d9534f;
+  border-color: #d74b47; }
+  .tx-staffholiday .tx-staffholiday_status-103.active {
+    background-color: #a02622;
+    border-color: #e27c79;
+    outline: 0;
+    -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05); }
+.tx-staffholiday .tx-staffholiday_noentries > p, .tx-staffholiday .tx-staffholiday_notloggedin > p {
+  padding: 15px; }
+.tx-staffholiday .panel {
+  border: 1px solid #ddd;
+  background-color: #fcfcfc; }
+  .tx-staffholiday .panel .btn-group, .tx-staffholiday .panel form {
+    margin: 15px 0 30px; }
+    .tx-staffholiday .panel .btn-group .btn, .tx-staffholiday .panel form .btn {
+      transition: background-color .3s ease;
+      color: #FFF; }
+    .tx-staffholiday .panel .btn-group .btn + .btn, .tx-staffholiday .panel form .btn + .btn {
+      margin-left: 0; }
+
+@media only screen and (max-width: 540px) {
+  .tx-staffholiday .panel .tx-staffholiday_btn-group-vertical-xs .btn {
+    display: block;
+    float: none;
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0; }
+    .tx-staffholiday .panel .tx-staffholiday_btn-group-vertical-xs .btn:first-child:not(:last-child) {
+      border-top-left-radius: 4px;
+      border-bottom-left-radius: 0;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0; }
+    .tx-staffholiday .panel .tx-staffholiday_btn-group-vertical-xs .btn:last-child:not(:first-child) {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 4px;
+      border-bottom-left-radius: 4px; } }
+.tx-staffholiday_table-filter {
+  background-color: #fff;
+  border-bottom: 1px solid #EEEEEE; }
+  .tx-staffholiday_table-filter tbody tr:hover {
+    cursor: pointer;
+    background-color: #EEEEEE; }
+  .tx-staffholiday_table-filter .media, .tx-staffholiday_table-filter .media-body {
+    overflow: visible; }
+  .tx-staffholiday_table-filter .media .title {
+    color: #2BBCDE;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: normal;
+    margin: 0; }
+    .tx-staffholiday_table-filter .media .title .btn-group {
+      margin-top: 0; }
+    .tx-staffholiday_table-filter .media .title span {
+      font-size: .8em;
+      color: #FFF; }
+
+.tx-staffholiday_onoffswitch ul {
+  list-style: none;
+  align-items: center;
+  text-align: left;
+  display: block;
+  padding: 0; }
+  .tx-staffholiday_onoffswitch ul li {
+    margin: 0; }
+    .tx-staffholiday_onoffswitch ul li h4 {
+      color: #777;
+      font-size: 16px;
+      margin: 5px 0 0;
+      vertical-align: top;
+      display: inline-block; }
+    .tx-staffholiday_onoffswitch ul li .onoffswitch-checkbox {
+      display: none; }
+      .tx-staffholiday_onoffswitch ul li .onoffswitch-checkbox, .tx-staffholiday_onoffswitch ul li .onoffswitch-checkbox:after, .tx-staffholiday_onoffswitch ul li .onoffswitch-checkbox:before, .tx-staffholiday_onoffswitch ul li .onoffswitch-checkbox *, .tx-staffholiday_onoffswitch ul li .onoffswitch-checkbox *:after, .tx-staffholiday_onoffswitch ul li .onoffswitch-checkbox *:before, .tx-staffholiday_onoffswitch ul li .onoffswitch-checkbox + .tgl-btn {
+        box-sizing: border-box; }
+        .tx-staffholiday_onoffswitch ul li .onoffswitch-checkbox::selection, .tx-staffholiday_onoffswitch ul li .onoffswitch-checkbox:after::selection, .tx-staffholiday_onoffswitch ul li .onoffswitch-checkbox:before::selection, .tx-staffholiday_onoffswitch ul li .onoffswitch-checkbox *::selection, .tx-staffholiday_onoffswitch ul li .onoffswitch-checkbox *:after::selection, .tx-staffholiday_onoffswitch ul li .onoffswitch-checkbox *:before::selection, .tx-staffholiday_onoffswitch ul li .onoffswitch-checkbox + .tgl-btn::selection {
+          background: none; }
+      .tx-staffholiday_onoffswitch ul li .onoffswitch-checkbox + .tgl-btn {
+        outline: 0;
+        width: 4em;
+        height: 2em;
+        position: relative;
+        cursor: pointer;
+        user-select: none; }
+        .tx-staffholiday_onoffswitch ul li .onoffswitch-checkbox + .tgl-btn:after, .tx-staffholiday_onoffswitch ul li .onoffswitch-checkbox + .tgl-btn:before {
+          position: relative;
+          display: block;
+          content: "";
+          width: 50%;
+          height: 100%; }
+        .tx-staffholiday_onoffswitch ul li .onoffswitch-checkbox + .tgl-btn:after {
+          left: 0; }
+        .tx-staffholiday_onoffswitch ul li .onoffswitch-checkbox + .tgl-btn:before {
+          display: none; }
+      .tx-staffholiday_onoffswitch ul li .onoffswitch-checkbox:checked + .tgl-btn:after {
+        left: 50%; }
+
+.tgl-success + .tgl-btn {
+  background: #fbfbfb;
+  border-radius: 2em;
+  padding: 2px;
+  transition: all .4s ease;
+  border: 1px solid #e8eae9; }
+  .tgl-success + .tgl-btn:after {
+    border-radius: 2em;
+    background: #fbfbfb;
+    transition: left 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), padding 0.3s ease, margin 0.3s ease;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 4px 0 rgba(0, 0, 0, 0.08); }
+  .tgl-success + .tgl-btn:hover:after {
+    will-change: padding; }
+  .tgl-success + .tgl-btn:active {
+    box-shadow: inset 0 0 0 2em #e8eae9; }
+    .tgl-success + .tgl-btn:active:after {
+      padding-right: .8em; }
+.tgl-success:checked + .tgl-btn {
+  background: #5cb85c; }
+  .tgl-success:checked + .tgl-btn:active {
+    box-shadow: none; }
+    .tgl-success:checked + .tgl-btn:active:after {
+      margin-left: -.8em; }
+
+.tgl-refused + .tgl-btn {
+  background: #fbfbfb;
+  border-radius: 2em;
+  padding: 2px;
+  transition: all .4s ease;
+  border: 1px solid #e8eae9; }
+  .tgl-refused + .tgl-btn:after {
+    border-radius: 2em;
+    background: #fbfbfb;
+    transition: left 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), padding 0.3s ease, margin 0.3s ease;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 4px 0 rgba(0, 0, 0, 0.08); }
+  .tgl-refused + .tgl-btn:hover:after {
+    will-change: padding; }
+  .tgl-refused + .tgl-btn:active {
+    box-shadow: inset 0 0 0 2em #e8eae9; }
+    .tgl-refused + .tgl-btn:active:after {
+      padding-right: .8em; }
+.tgl-refused:checked + .tgl-btn {
+  background: #d9534f; }
+  .tgl-refused:checked + .tgl-btn:active {
+    box-shadow: none; }
+    .tgl-refused:checked + .tgl-btn:active:after {
+      margin-left: -.8em; }
+
+.tgl-pending + .tgl-btn {
+  background: #fbfbfb;
+  border-radius: 2em;
+  padding: 2px;
+  transition: all .4s ease;
+  border: 1px solid #e8eae9; }
+  .tgl-pending + .tgl-btn:after {
+    border-radius: 2em;
+    background: #fbfbfb;
+    transition: left 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), padding 0.3s ease, margin 0.3s ease;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 4px 0 rgba(0, 0, 0, 0.08); }
+  .tgl-pending + .tgl-btn:hover:after {
+    will-change: padding; }
+  .tgl-pending + .tgl-btn:active {
+    box-shadow: inset 0 0 0 2em #e8eae9; }
+    .tgl-pending + .tgl-btn:active:after {
+      padding-right: .8em; }
+.tgl-pending:checked + .tgl-btn {
+  background: #f0ad4e; }
+  .tgl-pending:checked + .tgl-btn:active {
+    box-shadow: none; }
+    .tgl-pending:checked + .tgl-btn:active:after {
+      margin-left: -.8em; }
+
+.tgl-notice + .tgl-btn {
+  background: #fbfbfb;
+  border-radius: 2em;
+  padding: 2px;
+  transition: all .4s ease;
+  border: 1px solid #e8eae9; }
+  .tgl-notice + .tgl-btn:after {
+    border-radius: 2em;
+    background: #fbfbfb;
+    transition: left 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), padding 0.3s ease, margin 0.3s ease;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 4px 0 rgba(0, 0, 0, 0.08); }
+  .tgl-notice + .tgl-btn:hover:after {
+    will-change: padding; }
+  .tgl-notice + .tgl-btn:active {
+    box-shadow: inset 0 0 0 2em #e8eae9; }
+    .tgl-notice + .tgl-btn:active:after {
+      padding-right: .8em; }
+.tgl-notice:checked + .tgl-btn {
+  background: #2BBCDE; }
+  .tgl-notice:checked + .tgl-btn:active {
+    box-shadow: none; }
+    .tgl-notice:checked + .tgl-btn:active:after {
+      margin-left: -.8em; }
+
+@media only screen and (min-width: 768px) {
+  .tx-staffholiday_onoffswitch ul {
+    text-align: center;
+    display: flex; }
+    .tx-staffholiday_onoffswitch ul li {
+      margin: 0 1em; }
+      .tx-staffholiday_onoffswitch ul li h4 {
+        margin: 0;
+        vertical-align: middle;
+        display: block; } }

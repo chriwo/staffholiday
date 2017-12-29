@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2017-08-16T15:49:07Z"
+          product-name="staffholiday">
+        <header/>
+        <body>
+
+            <trans-unit id="plugin.title">
+                <target>Urlaubsanträge</target>
+            </trans-unit>
+
+            <trans-unit id="pleaseChoose">
+                <target>Bitte wähle eine Option</target>
+            </trans-unit>
+            <trans-unit id="main.title">
+                <target>Allgemein</target>
+            </trans-unit>
+            <trans-unit id="main.view">
+                <target>Ausgabeoption</target>
+            </trans-unit>
+            <trans-unit id="main.view.0">
+                <target>Neuen Urlaubsantrag erstellen</target>
+            </trans-unit>
+            <trans-unit id="main.view.1">
+                <target>Urlaubsantrag bearbeiten</target>
+            </trans-unit>
+            <trans-unit id="main.view.2">
+                <target>Liste aller Urlaubsanträge</target>
+            </trans-unit>
+            <trans-unit id="list.title">
+                <target>Listenansicht</target>
+            </trans-unit>
+            <trans-unit id="list.displayNotice">
+                <target>Bemerkung zum Urlaubsantrag anzeigen</target>
+            </trans-unit>
+            <trans-unit id="list.show.user">
+                <target>Zu zeigender Mitarbeiter</target>
+            </trans-unit>
+            <trans-unit id="list.show.user.1">
+                <target>[Eingeloggter Mitarbeiter]</target>
+            </trans-unit>
+            <trans-unit id="list.show.user.2">
+                <target>Alle Mitarbeiter</target>
+            </trans-unit>
+            <trans-unit id="list.excludeExpiredPlans">
+                <target>Vergangene Urlaube ausblenden</target>
+            </trans-unit>
+            <trans-unit id="list.filter">
+                <target>Filter anzeigen</target>
+            </trans-unit>
+            <trans-unit id="list.limit">
+                <target>Limit</target>
+            </trans-unit>
+            <trans-unit id="list.orderby">
+                <target>Sortiere Einträge nach</target>
+            </trans-unit>
+            <trans-unit id="list.orderby.0">
+                <target>Urlaubsbegin</target>
+            </trans-unit>
+            <trans-unit id="list.orderby.1">
+                <target>Urlaubsende</target>
+            </trans-unit>
+            <trans-unit id="list.orderby.2">
+                <target>Mitarbeiter</target>
+            </trans-unit>
+            <trans-unit id="list.sorting">
+                <target>Sortierrichtung</target>
+            </trans-unit>
+            <trans-unit id="list.sorting.0">
+                <target>Aufsteigend</target>
+            </trans-unit>
+            <trans-unit id="list.sorting.1">
+                <target>Absteigend</target>
+            </trans-unit>
+            <trans-unit id="list.usergroup">
+                <target>Zeige Mitarbeiter von Benutzergruppen (leer = zeige alle)</target>
+            </trans-unit>
+
+            <trans-unit id="new.title">
+                <target>Neu</target>
+            </trans-unit>
+            <trans-unit id="new.confirmByAdmin">
+                <target>Antrag muss genehmigt werden</target>
+            </trans-unit>
+
+        </body>
+    </file>
+</xliff>

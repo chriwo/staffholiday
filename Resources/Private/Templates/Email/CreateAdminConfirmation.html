@@ -1,0 +1,34 @@
+<html xmlns:f="https://xsd.helhum.io/ns/typo3/cms-fluid/master/ViewHelpers"
+	  data-namespace-typo3-fluid="true">
+
+	<f:layout name="Email" />
+
+	<f:section name="main">
+		<p><f:translate key="emailCreateAdminConfirmationSalutation" /></p>
+
+		<f:render partial="Mail/PlanProperties" arguments="{_all}" />
+
+		<p>
+			<f:format.printf arguments="{0: '{plan.user.firstName} {plan.user.lastName}'}">
+				<f:translate key="emailCreateAdminConfirmationText1" />
+			</f:format.printf>
+			<br>
+			<f:link.action action="confirmCreateRequest" controller="New" absolute="1" pageType="{settings.new.confirmPageTypeNum}"
+						   arguments="{plan:plan, hash:hash, status:'adminConfirmation'}">
+				<f:translate key="emailCreateAdminConfirmationLinkConfirm" />
+			</f:link.action>
+		</p>
+
+		<p>
+			<f:format.printf arguments="{0: '{plan.user.firstName} {plan.user.lastName}'}">
+				<f:translate key="emailCreateAdminConfirmationText2" />
+			</f:format.printf>
+			<br>
+			<f:link.action action="confirmCreateRequest" controller="New" absolute="1" pageType="{settings.new.confirmPageTypeNum}"
+						   arguments="{plan:plan, hash:hash, status:'adminConfirmationRefused'}">
+				<f:translate key="emailCreateAdminConfirmationLinkConfirmRefused" />
+			</f:link.action>
+		</p>
+	</f:section>
+
+</html>

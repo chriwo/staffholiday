@@ -1,0 +1,39 @@
+<html xmlns:f="https://xsd.helhum.io/ns/typo3/cms-fluid/master/ViewHelpers"
+			data-namespace-typo3-fluid="true">
+
+	<div class="tx-staffholiday_onoffswitch col-xs-7">
+		<ul class="tg-list">
+			<li>
+				<input class="onoffswitch-checkbox tgl-success" id="cb1" type="checkbox" checked data-target="102">
+				<label class="tgl-btn" for="cb1"></label>
+				<h4>
+					<f:translate key="tx_staffholiday_domain_model_plan.status.102"/>
+				</h4>
+			</li>
+			<li>
+				<input class="onoffswitch-checkbox tgl-pending" id="cb2" type="checkbox" checked data-target="101">
+				<label class="tgl-btn" for="cb2"></label>
+				<h4>
+					<f:translate key="tx_staffholiday_domain_model_plan.status.101"/>
+				</h4>
+			</li>
+			<li>
+				<input class="onoffswitch-checkbox tgl-refused" id="cb3" type="checkbox" checked data-target="103">
+				<label class="tgl-btn" for="cb3"></label>
+				<h4>
+					<f:translate key="tx_staffholiday_domain_model_plan.status.103"/>
+				</h4>
+			</li>
+			<f:if condition="{settings.list.displayNotice}">
+				<li>
+					<input type="checkbox" class="onoffswitch-checkbox tgl-notice" id="cb4" checked data-target="notice">
+					<label class="tgl-btn" for="cb4"></label>
+					<h4>
+						<f:translate key="tx_staffholiday_domain_model_plan.notice"/>
+					</h4>
+				</li>
+			</f:if>
+		</ul>
+	</div>
+
+</html>

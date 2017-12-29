@@ -1,0 +1,12 @@
+1.0.0 - 2017/12/29
+==================
+
+.. include:: ../../Includes.txt
+
+.. only:: html
+
+.. contents::
+   :local:
+   :depth: 3
+
+Initial TER upload – looking forward for your feedback!
