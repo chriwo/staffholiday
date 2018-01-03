@@ -37,20 +37,19 @@ class UserRepository extends FrontendUserRepository
     /**
      * Find users by comma-separated user group list.
      *
-     * @param string $userGroupList comma.separated list of user group uids
+     * @param string $userGroupList comma.separated list of user group uid
      * @param array $settings Flexform and TypoScript Settings
      * @param array $filter Filter Array
-     * @throws \TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException
-     * @return \TYPO3\CMS\Extbase\Persistence\QueryResultInterface|array
+     * @return array|\TYPO3\CMS\Extbase\Persistence\QueryResultInterface
      */
     public function findByUsergroups($userGroupList, $settings, $filter)
     {
         $query = $this->createQuery();
 
-        // where
         $and = [
             $query->greaterThan('uid', 0),
         ];
+
         if (!empty($userGroupList)) {
             $selectedUsergroups = GeneralUtility::trimExplode(',', $userGroupList, true);
             $logicalOr = [];
@@ -59,6 +58,7 @@ class UserRepository extends FrontendUserRepository
             }
             $and[] = $query->logicalOr($logicalOr);
         }
+
         if (!empty($filter['searchword'])) {
             $searchWords = GeneralUtility::trimExplode(' ', $filter['searchword'], true);
             $fieldsToSearch = GeneralUtility::trimExplode(
@@ -76,7 +76,6 @@ class UserRepository extends FrontendUserRepository
         }
         $query->matching($query->logicalAnd($and));
 
-        // sorting
         $sorting = QueryInterface::ORDER_ASCENDING;
         if ($settings['list']['sorting'] === 'desc') {
             $sorting = QueryInterface::ORDER_DESCENDING;
@@ -84,13 +83,10 @@ class UserRepository extends FrontendUserRepository
         $field = preg_replace('/[^a-zA-Z0-9_-]/', '', $settings['list']['orderby']);
         $query->setOrderings([$field => $sorting]);
 
-        // set limit
         if ((int) $settings['list']['limit'] > 0) {
             $query->setLimit((int) $settings['list']['limit']);
         }
 
-        $users = $query->execute();
-
-        return $users;
+        return $query->execute();
     }
 }
