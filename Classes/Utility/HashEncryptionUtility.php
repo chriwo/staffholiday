@@ -3,6 +3,7 @@ namespace ChriWo\Staffholiday\Utility;
 
 use ChriWo\Staffholiday\Domain\Model\Plan;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\CMS\Install\Exception;
 
 /***************************************************************
  *  Copyright notice
@@ -83,7 +84,7 @@ class HashEncryptionUtility extends AbstractUtility
     protected static function getEncryptionKey()
     {
         if (empty($GLOBALS['TYPO3_CONF_VARS']['SYS']['encryptionKey'])) {
-            throw new \Exception('No encryption key found in this TYPO3 installation');
+            throw new Exception('No encryption key found in this TYPO3 installation');
         }
 
         return $GLOBALS['TYPO3_CONF_VARS']['SYS']['encryptionKey'];
