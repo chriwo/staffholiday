@@ -5,6 +5,7 @@ use ChriWo\Staffholiday\Domain\Model\Log;
 use ChriWo\Staffholiday\Domain\Model\Plan;
 use ChriWo\Staffholiday\Utility\AbstractUtility;
 use ChriWo\Staffholiday\Utility\EmConfigurationUtility;
+use ChriWo\Staffholiday\Utility\FrontendUtility;
 use ChriWo\Staffholiday\Utility\HashEncryptionUtility;
 use ChriWo\Staffholiday\Utility\LocalizationUtility;
 use ChriWo\Staffholiday\Utility\LogUtility;
@@ -100,7 +101,7 @@ abstract class AbstractController extends ActionController
 
         $this->view->assignMultiple(
             [
-                'languageUid' => 0, //FrontendUtility::getFrontendLanguageUid(),
+                'languageUid' => FrontendUtility::getFrontendLanguageUid(),
                 'Pid' => $storagePid,
                 'dateTimeSetting' => $this->emConfiguration->getDateTimeHolidayHtml5(),
             ]
