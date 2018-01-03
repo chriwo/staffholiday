@@ -1,0 +1,23 @@
+1.0.1 - 2018/01/03
+==================
+
+.. include:: ../../Includes.txt
+
+.. only:: html
+
+.. contents::
+   :local:
+   :depth: 3
+
+All changes
+-----------
+
+This is a list of all changes in this release: ::
+
+   2018-01-03 [RELEASE] Set version of staffholiday to 1.0.1 (Commit 0c2b84b by Christian Wolfram)
+   2018-01-03 [CLEANUP] Fix code smell (Commit 6677c85 by Christian Wolfram)
+   2018-01-03 [BUGFIX] LanguageUid in frontend is static (Commit ae57de5 by Christian Wolfram)
+   2018-01-03 [CLEANUP] Update PHPDoc (Commit 4781550 by Christian Wolfram)
+   2018-01-03 [TASK] Use another exception handling method (Commit 406f699 by Christian Wolfram)
+
+This list has been created by using `git log --since="2017/12/30" --abbrev-commit --pretty='%ad %s (Commit %h by %an)' --date=short`.

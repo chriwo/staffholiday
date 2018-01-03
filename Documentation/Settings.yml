@@ -7,7 +7,7 @@ conf.py:
   copyright: 2017 - 2018
   project: Staff holiday
   version: 1.0
-  release: 1.0.0
+  release: 1.0.1
   latex_documents:
   - - Index
     - staffholiday.tex
