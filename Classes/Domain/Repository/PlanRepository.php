@@ -81,15 +81,14 @@ class PlanRepository extends AbstractRepository
             $query->equals('uid', $uid),
             $query->equals('deleted', 0),
         ];
-        $object = $query->matching($query->logicalAnd($and))->execute()->getFirst();
 
-        return $object;
+        return $query->matching($query->logicalAnd($and))->execute()->getFirst();
     }
 
     /**
+     *
      * @param \TYPO3\CMS\Extbase\Persistence\QueryInterface $query
-     * @param $settings
-     * @throws \TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException
+     * @param array $settings
      * @return array
      */
     protected function createContrainsFromSettings(QueryInterface $query, $settings)
@@ -128,9 +127,9 @@ class PlanRepository extends AbstractRepository
     }
 
     /**
+     *
      * @param \TYPO3\CMS\Extbase\Persistence\QueryInterface $query
-     * @param $userGroupList
-     * @throws \TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException
+     * @param string $userGroupList Comma-separated list of user group uid
      * @return null|\TYPO3\CMS\Extbase\Persistence\Generic\Qom\OrInterface
      */
     protected function createUserGroupConstrain(QueryInterface $query, $userGroupList)
@@ -151,8 +150,8 @@ class PlanRepository extends AbstractRepository
     }
 
     /**
+     *
      * @param \TYPO3\CMS\Extbase\Persistence\QueryInterface $query
-     * @throws \TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException
      * @return \TYPO3\CMS\Extbase\Persistence\Generic\Qom\ComparisonInterface
      */
     protected function createExcludeExpiredPlanContrain(QueryInterface $query)
@@ -163,9 +162,9 @@ class PlanRepository extends AbstractRepository
     }
 
     /**
+     *
      * @param \TYPO3\CMS\Extbase\Persistence\QueryInterface $query
      * @param int $year
-     * @throws \TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException
      * @return null|\TYPO3\CMS\Extbase\Persistence\Generic\Qom\AndInterface
      */
     protected function createYearConstrain(QueryInterface $query, $year)
@@ -188,9 +187,9 @@ class PlanRepository extends AbstractRepository
     }
 
     /**
+     *
      * @param \TYPO3\CMS\Extbase\Persistence\QueryInterface $query
-     * @param $filter
-     * @throws \TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException
+     * @param array $filter
      * @return null|\TYPO3\CMS\Extbase\Persistence\Generic\Qom\OrInterface
      */
     protected function createSearchConstrain(QueryInterface $query, $filter)
