@@ -232,6 +232,12 @@ class NewController extends AbstractController
             $this->addFlashMessage(LocalizationUtility::translate('createPlanCanceled'));
             LogUtility::log(Log::STATUS_PLANREFUSEDADMIN, $plan);
 
+            $variables = [
+                'plan' => $plan,
+                'settings' => $this->settings,
+                'dateTimeSetting' => 'format-' . $this->emConfiguration->getDateTimeHoliday(),
+            ];
+
             $this->sendMailService->send(
                 'CreateUserNotifyRefused',
                 StringUtility::makeEmailArray(
@@ -243,7 +249,7 @@ class NewController extends AbstractController
                     $this->settings['settings']['new']['email']['createUserNotifyRefused']['sender']['name']['value']
                 ),
                 'Your vacation was refused',
-                ['plan' => $plan],
+                $variables,
                 $this->config['new.']['email.']['createUserNotifyRefused.']
             );
             $this->redirectByAction('new', ($status ? $status . 'Redirect' : 'redirect'));
