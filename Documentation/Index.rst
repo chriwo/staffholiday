@@ -14,11 +14,11 @@ staffholiday
    :Copyright:
       2017 - 2018
 
-	:Classification:
-   	staff holiday
+   :Classification:
+      staff holiday
 
-	:Language:
-   	en
+   :Language:
+      en
 
    :Keywords:
       holiday, vacation, staff, personal, plan
@@ -30,6 +30,9 @@ staffholiday
       c.wolfram@chriwo.de
 
    :Version:
+      |version|
+
+   :Release:
       |release|
 
    :Rendered:
