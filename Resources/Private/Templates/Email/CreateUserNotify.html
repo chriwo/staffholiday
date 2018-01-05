@@ -4,6 +4,7 @@
 	<f:layout name="Email" />
 
 	<f:section name="main">
+
 		<p><f:translate key="emailCreateUserNotifySalutation" /> {plan.user.firstName} {plan.user.lastName},</p>
 
 		<p><f:translate key="emailCreateUserNotifyText1" /></p>
@@ -11,7 +12,7 @@
 		<table border="1" cellpadding="2" cellspacing="2">
 			<tr>
 				<td>
-					<f:translate key="tx_staffholiday_domain_model_plan.holiday_period"/>
+					<f:translate key="tx_staffholiday_domain_model_plan.holiday_period" />
 				</td>
 				<td>
 					{plan.holidayBegin -> f:format.date(format:"{f:translate(key:'{dateTimeSetting}')}")}
