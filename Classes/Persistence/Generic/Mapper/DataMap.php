@@ -4,7 +4,7 @@ namespace ChriWo\Staffholiday\Persistence\Generic\Mapper;
 /***************************************************************
  *  Copyright notice
  *
- *  (c) 2017 Christian Wolfram <c.wolfram@chriwo.de>
+ *  (c) 2017 - 2018 Christian Wolfram <c.wolfram@chriwo.de>
  *
  *  All rights reserved
  *

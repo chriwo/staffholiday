@@ -8,7 +8,7 @@ use TYPO3\CMS\Fluid\View\StandaloneView;
 /***************************************************************
  *  Copyright notice
  *
- *  (c) 2017 Christian Wolfram <c.wolfram@chriwo.de>
+ *  (c) 2017 - 2018 Christian Wolfram <c.wolfram@chriwo.de>
  *
  *  All rights reserved
  *
