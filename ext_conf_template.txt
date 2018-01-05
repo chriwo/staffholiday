@@ -4,5 +4,5 @@ disableLog = 0
 # cat=basic/enable/020; type=boolean; label= Disable holiday table: If you don't want to show the entries of holidays in backend list view, you can enable this option
 hideHolidayPlanTable = 0
 
-# cat=basic/enable/040; type=options[datetime,date] label= Use datetime or date: For the holiday begin and end date you can switch between datetime and date
+# cat=basic/enable/040; type=options[datetime,date]; label= Use datetime or date: For the holiday begin and end date you can switch between datetime and date
 dateTimeHoliday =
