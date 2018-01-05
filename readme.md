@@ -1,5 +1,8 @@
 # TYPO3 Extension ``staffholiday``
 
+[![Latest Stable Version](https://poser.pugx.org/chriwo/staffholiday/v/stable)](https://packagist.org/packages/chriwo/staffholiday)
+[![License](https://poser.pugx.org/chriwo/staffholiday/license)](https://packagist.org/packages/chriwo/staffholiday)
+
 ## Features
 
 - Based on extbase & fluid, implementing best practices from TYPO3 CMS
