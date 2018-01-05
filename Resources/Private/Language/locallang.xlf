@@ -92,7 +92,7 @@
                 <source>Your holiday application has been checked and approved. We wish you pleasant holidays.</source>
             </trans-unit>
             <trans-unit id="createPlanSuccess">
-                <target>Holiday application successfully approved</target>
+                <source>Holiday application successfully approved</source>
             </trans-unit>
             <trans-unit id="createPlanCanceled">
                 <source>Vacation successfully canceled</source>
