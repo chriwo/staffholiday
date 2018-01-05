@@ -58,4 +58,4 @@ Amazon wishlist
 ^^^^^^^^^^^^^^^
 
 From time to time I also have smaller desires. If you want to fulfill a small wish, you can look at my
-Amazon Wunschliste (https://www.amazon.de/gp/registry/wishlist/9O32AGLF1OUS/ref=cm_wl_list_o_5)
+Amazon wishlist (https://www.amazon.de/gp/registry/wishlist/9O32AGLF1OUS/ref=cm_wl_list_o_5)
