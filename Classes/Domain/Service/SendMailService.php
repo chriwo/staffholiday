@@ -69,6 +69,7 @@ class SendMailService
      * @throws \TYPO3\CMS\Extbase\Mvc\Exception\InvalidControllerNameException
      * @throws \TYPO3\CMS\Extbase\Mvc\Exception\InvalidExtensionNameException
      * @return bool mail was sent?
+     * @SuppressWarnings(PHPMD.Superglobals)
      */
     public function send($template, $receiver, $sender, $subject, $variables = [], $typoScript = [])
     {
@@ -94,41 +95,12 @@ class SendMailService
             ->setCharset($GLOBALS['TSFE']->metaCharset)
             ->setBody($this->getMailBody($template, $variables), 'text/html');
 
-        // overwrite email receiver
-        if ($this->cObj->cObjGetSingle($typoScript['receiver.']['email'], $typoScript['receiver.']['email.'])
-            && $this->cObj->cObjGetSingle($typoScript['receiver.']['name'], $typoScript['receiver.']['name.'])
-        ) {
-            $email->setTo(
-                [
-                    $this->cObj->cObjGetSingle($typoScript['receiver.']['email'], $typoScript['receiver.']['email.']) => $this->cObj->cObjGetSingle($typoScript['receiver.']['name'], $typoScript['receiver.']['name.']),
-                ]
-            );
-        }
-
-        // overwrite email sender
-        if ($this->cObj->cObjGetSingle($typoScript['sender.']['email'], $typoScript['sender.']['email.']) &&
-            $this->cObj->cObjGetSingle($typoScript['sender.']['name'], $typoScript['sender.']['name.'])
-        ) {
-            $email->setFrom(
-                [
-                    $this->cObj->cObjGetSingle($typoScript['sender.']['email'], $typoScript['sender.']['email.']) => $this->cObj->cObjGetSingle($typoScript['sender.']['name'], $typoScript['sender.']['name.']),
-                ]
-            );
-        }
+        $this->overrideEmailReceiver($email, $typoScript);
+        $this->overrideEmailSender($email, $typoScript);
 
         // overwrite email subject
         if ($this->cObj->cObjGetSingle($typoScript['subject'], $typoScript['subject.'])) {
             $email->setSubject($this->cObj->cObjGetSingle($typoScript['subject'], $typoScript['subject.']));
-        }
-
-        // overwrite email CC receivers
-        if ($this->cObj->cObjGetSingle($typoScript['cc'], $typoScript['cc.'])) {
-            $email->setCc($this->cObj->cObjGetSingle($typoScript['cc'], $typoScript['cc.']));
-        }
-
-        // overwrite email priority
-        if ($this->cObj->cObjGetSingle($typoScript['priority'], $typoScript['priority.'])) {
-            $email->setPriority($this->cObj->cObjGetSingle($typoScript['priority'], $typoScript['priority.']));
         }
 
         // add ics attachments
@@ -158,6 +130,47 @@ class SendMailService
         $standAloneView->assignMultiple($variables);
 
         return $standAloneView->render();
+    }
+
+    /**
+     * Override the email receiver
+     *
+     * @param MailMessage $email
+     * @param array $typoScript
+     * @return void
+     */
+    protected function overrideEmailReceiver(&$email, $typoScript)
+    {
+        if ($this->cObj->cObjGetSingle($typoScript['receiver.']['email'], $typoScript['receiver.']['email.'])
+            && $this->cObj->cObjGetSingle($typoScript['receiver.']['name'], $typoScript['receiver.']['name.'])
+        ) {
+            $receiver = [
+                $this->cObj->cObjGetSingle($typoScript['receiver.']['email'], $typoScript['receiver.']['email.']) =>
+                    $this->cObj->cObjGetSingle($typoScript['receiver.']['name'], $typoScript['receiver.']['name.'])
+            ];
+
+            $email->setTo($receiver);
+        }
+    }
+
+    /**
+     * Override the email sender
+     *
+     * @param MailMessage $email
+     * @param array $typoScript
+     * @return void
+     */
+    protected function overrideEmailSender(&$email, $typoScript)
+    {
+        if ($this->cObj->cObjGetSingle($typoScript['sender.']['email'], $typoScript['sender.']['email.']) &&
+            $this->cObj->cObjGetSingle($typoScript['sender.']['name'], $typoScript['sender.']['name.'])
+        ) {
+            $sender = [
+                $this->cObj->cObjGetSingle($typoScript['sender.']['email'], $typoScript['sender.']['email.']) =>
+                    $this->cObj->cObjGetSingle($typoScript['sender.']['name'], $typoScript['sender.']['name.'])
+            ];
+            $email->setFrom($sender);
+        }
     }
 
     /**
