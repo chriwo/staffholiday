@@ -1,8 +1,7 @@
 <?php
 namespace ChriWo\Staffholiday\Utility;
 
-use In2code\Femanager\Domain\Model\User;
-use In2code\Femanager\Domain\Repository\UserRepository;
+use ChriWo\Staffholiday\Domain\Repository\UserRepository;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Object\ObjectManager;
 
@@ -38,7 +37,7 @@ class UserUtility extends AbstractUtility
     /**
      * Return current logged in fe_user.
      *
-     * @return User|null
+     * @return null|object|\ChriWo\Staffholiday\Domain\Model\User
      */
     public static function getCurrentUser()
     {
