@@ -110,6 +110,9 @@
             <trans-unit id="emailCreateUserNotifyRefusedText1">
                 <target>dein Urlaubsantrag wurde überprüft und abgelehnt.</target>
             </trans-unit>
+			<trans-unit id="emailiCalSummary">
+				<target>Urlaub von %1$s %2$s</target>
+			</trans-unit>
 
         </body>
     </file>

@@ -1,9 +1,9 @@
 <?php
 namespace ChriWo\Staffholiday\Domain\Service;
 
+use ChriWo\Staffholiday\Utility\LocalizationUtility;
 use ChriWo\Staffholiday\Utility\TemplateUtility;
 use TYPO3\CMS\Core\Mail\MailMessage;
-use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 /***************************************************************
  *  Copyright notice
@@ -131,16 +131,9 @@ class SendMailService
             $email->setPriority($this->cObj->cObjGetSingle($typoScript['priority'], $typoScript['priority.']));
         }
 
-        // add attachments from typoscript
-        if ($this->cObj->cObjGetSingle($typoScript['attachments'], $typoScript['attachments.'])) {
-            $files = GeneralUtility::trimExplode(
-                ',',
-                $this->cObj->cObjGetSingle($typoScript['attachments'], $typoScript['attachments.']),
-                true
-            );
-            foreach ($files as $file) {
-                $email->attach(\Swift_Attachment::fromPath($file));
-            }
+        // add ics attachments
+        if ($typoScript['attachIcsFile']) {
+            $this->addIcsAttachment($email, $variables['plan']);
         }
 
         $email->send();
@@ -165,6 +158,39 @@ class SendMailService
         $standAloneView->assignMultiple($variables);
 
         return $standAloneView->render();
+    }
+
+    /**
+     * Create and add an ics calender file as attachment
+     *
+     * @param MailMessage $email
+     * @param \ChriWo\Staffholiday\Domain\Model\Plan $plan
+     * @return void
+     */
+    protected function addIcsAttachment(&$email, $plan)
+    {
+        $properties = [
+            'dtstart' => $plan->getHolidayBegin(),
+            'dtend' => $plan->getHolidayEnd(),
+            'description' => $plan->getNotice(),
+            'summary' => LocalizationUtility::translate(
+                'emailiCalSummary',
+                'staffholiday',
+                [
+                    $plan->getUser()->getFirstName(),
+                    $plan->getUser()->getLastName()
+                ]
+            )
+        ];
+
+        $icsService = $this->objectManager->get(IcsService::class, $properties);
+        $icsService->set($properties);
+
+        $email->attach(\Swift_Attachment::newInstance(
+            $icsService->toString(),
+            $properties['summary'],
+            'text/calendar'
+        ));
     }
 
     /**

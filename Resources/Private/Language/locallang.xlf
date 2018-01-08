@@ -109,6 +109,9 @@
             <trans-unit id="emailCreateUserNotifyRefusedText1">
                 <source>Your holiday application has been checked and canceld.</source>
             </trans-unit>
+			<trans-unit id="emailiCalSummary">
+				<source>Holiday of %1$s %2$s</source>
+			</trans-unit>
 
         </body>
     </file>

@@ -50,6 +50,8 @@ plugin.tx_staffholiday {
 
                     subject = TEXT
                     subject.data = LLL:EXT:staffholiday/Resources/Private/Language/locallang.xlf:emailCreateAdminConfirmationSubject
+
+                    attachIcsFile = 1
                 }
 
                 createUserNotify {
@@ -64,6 +66,8 @@ plugin.tx_staffholiday {
                     # Overwrite Subject
                     subject = TEXT
                     subject.data = LLL:EXT:staffholiday/Resources/Private/Language/locallang.xlf:emailCreateUserNotifySubject
+
+                    attachIcsFile = 1
                 }
 
                 createUserNotifyRefused {
@@ -78,6 +82,8 @@ plugin.tx_staffholiday {
                     # Overwrite Subject
                     subject = TEXT
                     subject.data = LLL:EXT:staffholiday/Resources/Private/Language/locallang.xlf:emailCreateUserNotifyRefusedSubject
+
+                    attachIcsFile = 0
                 }
             }
         }
