@@ -183,6 +183,9 @@ Plain Text
 
                        subject = TEXT
                        subject.data = LLL:EXT:staffholiday/Resources/Private/Language/locallang.xlf:emailCreateAdminConfirmationSubject
+
+                       # activate the ics calendar file as email attachment
+                       attachIcsFile = 1
                    }
 
                    createUserNotify {
@@ -197,6 +200,9 @@ Plain Text
                        # Overwrite Subject
                        subject = TEXT
                        subject.data = LLL:EXT:staffholiday/Resources/Private/Language/locallang.xlf:emailCreateUserNotifySubject
+
+                       # activate the ics calendar file as email attachment
+                       attachIcsFile = 1
                    }
 
                    createUserNotifyRefused {
@@ -211,6 +217,9 @@ Plain Text
                        # Overwrite Subject
                        subject = TEXT
                        subject.data = LLL:EXT:staffholiday/Resources/Private/Language/locallang.xlf:emailCreateUserNotifyRefusedSubject
+
+                       # deactivate the ics calendar file as email attachment
+                       attachIcsFile = 0
                    }
                }
            }
