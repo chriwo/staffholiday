@@ -1,0 +1,65 @@
+1.1.0 - 2018/01/08
+==================
+
+.. include:: ../../Includes.txt
+
+.. only:: html
+
+.. contents::
+   :local:
+   :depth: 3
+
+Features
+--------
+
+vCalendar
+^^^^^^^^^
+
+Now is it possible to add an ics calendar file as email attachment. Per default is this file add into the
+admin confirmation and user notify mode. The file can be saved locally to be imported into a calendar of your choice.
+Alternatively, double-click the file and the leave request will be added to your default calendar.
+
+.. code-block:: text
+
+   plugin.tx_staffholiday {
+      settings {
+         new {
+            email {
+               createAdminConfirmation {
+                  # activate the ics calendar file as email attachment
+                  attachIcsFile = 1
+               }
+
+               createUserNotify {
+                  # activate the ics calendar file as email attachment
+                  attachIcsFile = 1
+               }
+            }
+         }
+      }
+   }
+
+
+All changes
+-----------
+
+This is a list of all changes in this release: ::
+
+   2018-01-08 [TASK] Set version to 1.1.0-dev (Commit 40c3f36 by Christian Wolfram)
+   2018-01-08 Revert "[TASK] Set version to 1.0.2-dev" (Commit 721f016 by Christian Wolfram)
+   2018-01-08 [FEATURE] Integrate vCalender option (Commit bec47c4 by Christian Wolfram)
+   2018-01-08 [BUGFIX] Output user image compatibility with TYPO3 7.6 and 8.7 (Commit 8d39caa by Christian Wolfram)
+   2018-01-08 [BUGFIX] Remove model and repository of femanager (Commit 4a02f87 by Christian Wolfram)
+   2018-01-05 [BUGFIX] User notify refused template could not be rendered (Commit 5a42e2d by Christian Wolfram)
+   2018-01-05 [CLEANUP] Reformat code (Commit 58150c7 by Christian Wolfram)
+   2018-01-05 [BUGFIX] Add semicolon as separator between type and label (Commit 830fc66 by Christian Wolfram)
+   2018-01-05 [BUGFIX] Wrong translation tag (Commit 12c109c by Christian Wolfram)
+   2018-01-05 [TASK] Update copyright notice (Commit 134db4d by Christian Wolfram)
+   2018-01-05 [DOC] Add icons for stable version and licence (Commit d0c3648 by Christian Wolfram)
+   2018-01-05 [CLEANUP] Change code style to 4 spaces and add licence (Commit 40bd67d by Christian Wolfram)
+   2018-01-05 [DOC] Fix miss spelling (Commit 0ae3142 by Christian Wolfram)
+   2018-01-05 [DOC] Fix rendering problem (Commit 88edb40 by Christian Wolfram)
+   2018-01-05 [TASK] Set version to 1.0.2-dev (Commit e2eb88f by Christian Wolfram)
+
+
+This list has been created by using `git log --since="2018/01/04" --abbrev-commit --pretty='%ad %s (Commit %h by %an)' --date=short`.
