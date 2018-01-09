@@ -45,6 +45,7 @@ All changes
 
 This is a list of all changes in this release: ::
 
+   2018-01-09 [RELEASE] Set version of staffholiday to 1.1.0 (Commit f11ba81 by Christian Wolfram)
    2018-01-08 [TASK] Set version to 1.1.0-dev (Commit 40c3f36 by Christian Wolfram)
    2018-01-08 Revert "[TASK] Set version to 1.0.2-dev" (Commit 721f016 by Christian Wolfram)
    2018-01-08 [FEATURE] Integrate vCalender option (Commit bec47c4 by Christian Wolfram)
