@@ -1,8 +1,5 @@
 <?php
-
-if (!defined('TYPO3_MODE')) {
-    die('Access denied.');
-}
+defined('TYPO3_MODE') || die();
 
 $boot = function ($extensionKey) {
     foreach (['plan', 'log'] as $table) {

@@ -1,9 +1,7 @@
 <?php
-use ChriWo\Staffholiday\Domain\Model\Plan;
+defined('TYPO3_MODE') || die();
 
-if (!defined('TYPO3_MODE')) {
-    die('Access denied.');
-}
+use ChriWo\Staffholiday\Domain\Model\Plan;
 
 $extConfiguration = \ChriWo\Staffholiday\Utility\EmConfigurationUtility::getSettings();
 $model = 'tx_staffholiday_domain_model_plan';

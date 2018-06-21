@@ -1,9 +1,7 @@
 <?php
-use ChriWo\Staffholiday\Domain\Model\Log;
+defined('TYPO3_MODE') || die();
 
-if (!defined('TYPO3_MODE')) {
-    die('Access denied.');
-}
+use ChriWo\Staffholiday\Domain\Model\Log;
 
 $model = 'tx_staffholiday_domain_model_log';
 $languageFile = 'LLL:EXT:staffholiday/Resources/Private/Language/locallang_db.xlf:' . $model;
