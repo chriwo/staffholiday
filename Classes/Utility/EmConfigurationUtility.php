@@ -37,7 +37,7 @@ class EmConfigurationUtility
      * @return array unserialized extconf settings
      * @SuppressWarnings(PHPMD.Superglobals)
      */
-    public static function parseSettings()
+    public static function parseSettings(): array
     {
         $settings = unserialize($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['staffholiday']);
 
