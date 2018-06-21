@@ -6,12 +6,12 @@ if (!defined('TYPO3_MODE')) {
 }
 
 $extConfiguration = \ChriWo\Staffholiday\Utility\EmConfigurationUtility::getSettings();
-$llDb = 'LLL:EXT:staffholiday/Resources/Private/Language/locallang_db.xlf:';
 $model = 'tx_staffholiday_domain_model_plan';
+$languageFile = 'LLL:EXT:staffholiday/Resources/Private/Language/locallang_db.xlf:' . $model;
 
 $planColumns = [
     'ctrl' => [
-        'title' => $llDb . $model,
+        'title' => $languageFile,
         'label' => 'holiday_begin',
         'label_alt' => 'holiday_end, user',
         'label_alt_force' => true,
@@ -141,7 +141,7 @@ $planColumns = [
             ],
         ],
         'crdate' => [
-            'label' => $llDb . $model . '.crdate',
+            'label' => $languageFile . '.crdate',
             'config' => [
                 'type' => 'input',
                 'renderType' => 'inputDateTime',
@@ -151,7 +151,7 @@ $planColumns = [
         ],
         'holiday_begin' => [
             'exclude' => false,
-            'label' => $llDb . $model . '.holiday_begin',
+            'label' => $languageFile . '.holiday_begin',
             'config' => [
                 'type' => 'input',
                 'renderType' => 'inputDateTime',
@@ -161,7 +161,7 @@ $planColumns = [
         ],
         'holiday_end' => [
             'exclude' => false,
-            'label' => $llDb . $model . '.holiday_end',
+            'label' => $languageFile . '.holiday_end',
             'config' => [
                 'type' => 'input',
                 'renderType' => 'inputDateTime',
@@ -171,7 +171,7 @@ $planColumns = [
         ],
         'notice' => [
             'exclude' => false,
-            'label' => $llDb . $model . '.notice',
+            'label' => $languageFile . '.notice',
             'config' => [
                 'type' => 'text',
                 'cols' => 40,
@@ -183,14 +183,14 @@ $planColumns = [
         ],
         'status' => [
             'exclude' => false,
-            'label' => $llDb . $model . '.status',
+            'label' => $languageFile . '.status',
             'config' => [
                 'type' => 'select',
                 'renderType' => 'selectSingle',
                 'items' => [
-                    [$llDb . $model . '.status.101', Plan::STATUS_OPEN],
-                    [$llDb . $model . '.status.102', Plan::STATUS_CONFIRMED],
-                    [$llDb . $model . '.status.103', Plan::STATUS_REFUSED],
+                    [$languageFile . '.status.101', Plan::STATUS_OPEN],
+                    [$languageFile . '.status.102', Plan::STATUS_CONFIRMED],
+                    [$languageFile . '.status.103', Plan::STATUS_REFUSED],
                 ],
                 'size' => 1,
                 'maxitems' => 1,
@@ -198,7 +198,7 @@ $planColumns = [
         ],
         'user' => [
             'exclude' => false,
-            'label' => $llDb . $model . '.user',
+            'label' => $languageFile . '.user',
             'config' => [
                 'type' => 'select',
                 'renderType' => 'selectSingle',
@@ -219,7 +219,7 @@ $planColumns = [
 if (!$extConfiguration->isDisableLog()) {
     $planColumns['columns']['log'] = [
         'exclude' => true,
-        'label' => $llDb . $model . '.log',
+        'label' => $languageFile . '.log',
         'config' => [
             'type' => 'inline',
             'foreign_table' => 'tx_staffholiday_domain_model_log',

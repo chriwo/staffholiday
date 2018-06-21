@@ -5,12 +5,12 @@ if (!defined('TYPO3_MODE')) {
     die('Access denied.');
 }
 
-$llDb = 'LLL:EXT:staffholiday/Resources/Private/Language/locallang_db.xlf:';
 $model = 'tx_staffholiday_domain_model_log';
+$languageFile = 'LLL:EXT:staffholiday/Resources/Private/Language/locallang_db.xlf:' . $model;
 
 return [
     'ctrl' => [
-        'title' => $llDb . $model,
+        'title' => $languageFile,
         'label' => 'title',
         'tstamp' => 'tstamp',
         'crdate' => 'crdate',
@@ -124,7 +124,7 @@ return [
         ],
         'title' => [
             'exclude' => false,
-            'label' => $llDb . 'tx_staffholiday_domain_model_log.title',
+            'label' => $languageFile . 'tx_staffholiday_domain_model_log.title',
             'config' => [
                 'type' => 'input',
                 'size' => 30,
@@ -132,7 +132,7 @@ return [
             ],
         ],
         'crdate' => [
-            'label' => $llDb . 'tx_staffholiday_domain_model_log.crdate',
+            'label' => $languageFile . 'tx_staffholiday_domain_model_log.crdate',
             'config' => [
                 'type' => 'input',
                 'renderType' => 'inputDateTime',
@@ -142,21 +142,21 @@ return [
         ],
         'state' => [
             'exclude' => false,
-            'label' => $llDb . 'tx_staffholiday_domain_model_log.state',
+            'label' => $languageFile . 'tx_staffholiday_domain_model_log.state',
             'config' => [
                 'type' => 'select',
                 'renderType' => 'selectSingle',
                 'items' => [
-                    [$llDb . 'tx_staffholiday_domain_model_log.state.100', '--div--'],
-                    [$llDb . 'tx_staffholiday_domain_model_log.state.101', Log::STATUS_NEWPLAN],
-                    [$llDb . 'tx_staffholiday_domain_model_log.state.102', Log::STATUS_PLANCONFIRMEDADMIN],
-                    [$llDb . 'tx_staffholiday_domain_model_log.state.103', Log::STATUS_PLANREFUSEDUSER],
-                    [$llDb . 'tx_staffholiday_domain_model_log.state.104', Log::STATUS_PLANREFUSEDADMIN],
-                    [$llDb . 'tx_staffholiday_domain_model_log.state.105', Log::STATUS_PLANREQUEST],
-                    [$llDb . 'tx_staffholiday_domain_model_log.state.200', '--div--'],
-                    [$llDb . 'tx_staffholiday_domain_model_log.state.201', Log::STATUS_PLANUPDATED],
-                    [$llDb . 'tx_staffholiday_domain_model_log.state.300', '--div--'],
-                    [$llDb . 'tx_staffholiday_domain_model_log.state.301', Log::STATUS_PLANDELETED],
+                    [$languageFile . 'tx_staffholiday_domain_model_log.state.100', '--div--'],
+                    [$languageFile . 'tx_staffholiday_domain_model_log.state.101', Log::STATUS_NEWPLAN],
+                    [$languageFile . 'tx_staffholiday_domain_model_log.state.102', Log::STATUS_PLANCONFIRMEDADMIN],
+                    [$languageFile . 'tx_staffholiday_domain_model_log.state.103', Log::STATUS_PLANREFUSEDUSER],
+                    [$languageFile . 'tx_staffholiday_domain_model_log.state.104', Log::STATUS_PLANREFUSEDADMIN],
+                    [$languageFile . 'tx_staffholiday_domain_model_log.state.105', Log::STATUS_PLANREQUEST],
+                    [$languageFile . 'tx_staffholiday_domain_model_log.state.200', '--div--'],
+                    [$languageFile . 'tx_staffholiday_domain_model_log.state.201', Log::STATUS_PLANUPDATED],
+                    [$languageFile . 'tx_staffholiday_domain_model_log.state.300', '--div--'],
+                    [$languageFile . 'tx_staffholiday_domain_model_log.state.301', Log::STATUS_PLANDELETED],
                 ],
                 'size' => 1,
                 'maxitems' => 1,
