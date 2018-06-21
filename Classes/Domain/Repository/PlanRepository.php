@@ -1,6 +1,7 @@
 <?php
 namespace ChriWo\Staffholiday\Domain\Repository;
 
+use ChriWo\Staffholiday\Utility\ObjectUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Persistence\QueryInterface;
 
@@ -18,36 +19,32 @@ use TYPO3\CMS\Extbase\Persistence\QueryInterface;
  */
 class PlanRepository extends AbstractRepository
 {
+    const TABLE = 'tx_staffholiday_domain_model_plan';
+
     /**
      * Find all years of holiday plans.
      *
      * @param bool $excludeExpiredPlan
-     * @return array|\TYPO3\CMS\Extbase\Persistence\QueryResultInterface
+     * @return array
      */
     public function findYears($excludeExpiredPlan = false)
     {
-        $excludeWhere = '';
+        $queryBuilder = ObjectUtility::getConnectionPool()->getQueryBuilderForTable(self::TABLE);
 
         if ($excludeExpiredPlan) {
             $currentDate = new \DateTime('now');
-            $excludeWhere = ' AND plan.holiday_end > ' . $currentDate->getTimestamp();
+            $queryBuilder->where(
+                $queryBuilder->expr()->gt('holiday_end', $currentDate->getTimestamp())
+            );
         }
 
-        $query = $this->createQuery();
-        $query->statement(
-            'SELECT 
-              FROM_UNIXTIME(plan.holiday_begin, \'%Y\') as years
-			FROM 
-			  tx_staffholiday_domain_model_plan AS plan 
-			WHERE 
-			  plan.deleted=0 AND plan.hidden=0 ' . $excludeWhere . '
-			GROUP BY 
-			  years 
-			ORDER BY 
-			  years desc'
-        );
-
-        return $query->execute(true);
+        return $queryBuilder
+            ->addSelectLiteral('FROM_UNIXTIME(holiday_begin, \'%Y\') as years')
+            ->from(self::TABLE)
+            ->orderBy('years', 'DESC')
+            ->groupBy('years')
+            ->execute()
+            ->fetchAll();
     }
 
     /**

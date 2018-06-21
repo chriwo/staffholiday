@@ -3,7 +3,7 @@ namespace ChriWo\Staffholiday\Controller;
 
 use ChriWo\Staffholiday\Domain\Model\Log;
 use ChriWo\Staffholiday\Domain\Model\Plan;
-use ChriWo\Staffholiday\Utility\AbstractUtility;
+use ChriWo\Staffholiday\Utility\ObjectUtility;
 use ChriWo\Staffholiday\Utility\EmConfigurationUtility;
 use ChriWo\Staffholiday\Utility\FrontendUtility;
 use ChriWo\Staffholiday\Utility\HashEncryptionUtility;
@@ -130,7 +130,7 @@ abstract class AbstractController extends ActionController
     {
         $plan->setStatus(Plan::STATUS_CONFIRMED);
         $this->planRepository->add($plan);
-        AbstractUtility::getPersistenceManager()->persistAll();
+        ObjectUtility::getPersistenceManager()->persistAll();
 
         $this->addFlashMessage(LocalizationUtility::translate('create'));
         LogUtility::log(Log::STATUS_NEWPLAN, $plan);
@@ -156,7 +156,7 @@ abstract class AbstractController extends ActionController
     {
         $this->planRepository->add($plan);
 
-        AbstractUtility::getPersistenceManager()->persistAll();
+        ObjectUtility::getPersistenceManager()->persistAll();
         LogUtility::log(Log::STATUS_PLANREQUEST, $plan);
 
         $this->createAdminConfirmationRequest($plan);

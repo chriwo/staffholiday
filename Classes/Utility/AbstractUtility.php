@@ -1,6 +1,7 @@
 <?php
 namespace ChriWo\Staffholiday\Utility;
 
+use TYPO3\CMS\Core\Database\ConnectionPool;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Configuration\ConfigurationManager;
 use TYPO3\CMS\Extbase\Object\ObjectManager;
@@ -42,6 +43,16 @@ abstract class AbstractUtility
     protected static function getConfigurationManager()
     {
         return self::getObjectManager()->get(ConfigurationManager::class);
+    }
+
+    /**
+     * Create an instance of connection pool.
+     *
+     * @return object|\TYPO3\CMS\Core\Database\ConnectionPool
+     */
+    protected static function getConnectionPool()
+    {
+        return self::getObjectManager()->get(ConnectionPool::class);
     }
 
     /**
