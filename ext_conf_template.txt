@@ -5,4 +5,4 @@ disableLog = 0
 hideHolidayPlanTable = 0
 
 # cat=basic/enable/040; type=options[datetime,date]; label= Use datetime or date: For the holiday begin and end date you can switch between datetime and date
-dateTimeHoliday =
+dateTimeHoliday = datetime
