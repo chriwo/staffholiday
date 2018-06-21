@@ -112,7 +112,7 @@ return [
         ],
         'title' => [
             'exclude' => false,
-            'label' => $languageFile . 'tx_staffholiday_domain_model_log.title',
+            'label' => $languageFile . '.title',
             'config' => [
                 'type' => 'input',
                 'size' => 30,
@@ -120,7 +120,7 @@ return [
             ],
         ],
         'crdate' => [
-            'label' => $languageFile . 'tx_staffholiday_domain_model_log.crdate',
+            'label' => $languageFile . '.crdate',
             'config' => [
                 'type' => 'input',
                 'renderType' => 'inputDateTime',
@@ -130,21 +130,21 @@ return [
         ],
         'state' => [
             'exclude' => false,
-            'label' => $languageFile . 'tx_staffholiday_domain_model_log.state',
+            'label' => $languageFile . '.state',
             'config' => [
                 'type' => 'select',
                 'renderType' => 'selectSingle',
                 'items' => [
-                    [$languageFile . 'tx_staffholiday_domain_model_log.state.100', '--div--'],
-                    [$languageFile . 'tx_staffholiday_domain_model_log.state.101', Log::STATUS_NEWPLAN],
-                    [$languageFile . 'tx_staffholiday_domain_model_log.state.102', Log::STATUS_PLANCONFIRMEDADMIN],
-                    [$languageFile . 'tx_staffholiday_domain_model_log.state.103', Log::STATUS_PLANREFUSEDUSER],
-                    [$languageFile . 'tx_staffholiday_domain_model_log.state.104', Log::STATUS_PLANREFUSEDADMIN],
-                    [$languageFile . 'tx_staffholiday_domain_model_log.state.105', Log::STATUS_PLANREQUEST],
-                    [$languageFile . 'tx_staffholiday_domain_model_log.state.200', '--div--'],
-                    [$languageFile . 'tx_staffholiday_domain_model_log.state.201', Log::STATUS_PLANUPDATED],
-                    [$languageFile . 'tx_staffholiday_domain_model_log.state.300', '--div--'],
-                    [$languageFile . 'tx_staffholiday_domain_model_log.state.301', Log::STATUS_PLANDELETED],
+                    [$languageFile . '.state.100', '--div--'],
+                    [$languageFile . '.state.101', Log::STATUS_NEWPLAN],
+                    [$languageFile . '.state.102', Log::STATUS_PLANCONFIRMEDADMIN],
+                    [$languageFile . '.state.103', Log::STATUS_PLANREFUSEDUSER],
+                    [$languageFile . '.state.104', Log::STATUS_PLANREFUSEDADMIN],
+                    [$languageFile . '.state.105', Log::STATUS_PLANREQUEST],
+                    [$languageFile . '.state.200', '--div--'],
+                    [$languageFile . '.state.201', Log::STATUS_PLANUPDATED],
+                    [$languageFile . '.state.300', '--div--'],
+                    [$languageFile . '.state.301', Log::STATUS_PLANDELETED],
                 ],
                 'size' => 1,
                 'maxitems' => 1,
