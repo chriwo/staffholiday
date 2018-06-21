@@ -89,9 +89,9 @@ $planColumns = [
                 'items' => [
                     ['', 0],
                 ],
-                'foreign_table' => 'tx_staffholiday_domain_model_log',
-                'foreign_table_where' => 'AND tx_staffholiday_domain_model_log.pid = ###CURRENT_PID### AND ' .
-                    'tx_staffholiday_domain_model_log.sys_language_uid IN (-1,0)',
+                'foreign_table' => 'tx_staffholiday_domain_model_plan',
+                'foreign_table_where' => 'AND tx_staffholiday_domain_model_plan.pid = ###CURRENT_PID### AND ' .
+                    'tx_staffholiday_domain_model_plan.sys_language_uid IN (-1,0)',
             ],
         ],
         'l10n_diffsource' => [
