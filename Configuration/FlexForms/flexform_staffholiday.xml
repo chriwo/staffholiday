@@ -26,12 +26,6 @@
                                         <numIndex index="0">LLL:EXT:staffholiday/Resources/Private/Language/locallang_flexform.xlf:main.view.0</numIndex>
                                         <numIndex index="1">New->new;New->create;New->createStatus;New->confirmCreateRequest;</numIndex>
                                     </numIndex>
-                                    <!--
-                                    <numIndex index="2" type="array">
-                                        <numIndex index="0">LLL:EXT:staffholiday/Resources/Private/Language/locallang_flexform.xlf:main.view.1</numIndex>
-                                        <numIndex index="1">Edit->edit;Edit->update;Edit->delete;Edit->confirmUpdateRequest;</numIndex>
-                                    </numIndex>
-                                    -->
                                     <numIndex index="3" type="array">
                                         <numIndex index="0">LLL:EXT:staffholiday/Resources/Private/Language/locallang_flexform.xlf:main.view.2</numIndex>
                                         <numIndex index="1">Holiday->list;</numIndex>
