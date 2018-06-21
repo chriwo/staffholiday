@@ -50,15 +50,14 @@ abstract class AbstractController extends ActionController
      * @var \ChriWo\Staffholiday\Domain\Model\User
      */
     public $user;
+
     /**
      * @var \ChriWo\Staffholiday\Domain\Repository\PlanRepository
-     * @inject
      */
     protected $planRepository;
 
     /**
      * @var \ChriWo\Staffholiday\Domain\Service\SendMailService
-     * @inject
      */
     protected $sendMailService;
 
@@ -76,6 +75,26 @@ abstract class AbstractController extends ActionController
      * @var \ChriWo\Staffholiday\Domain\Model\Dto\EmConfiguration
      */
     protected $emConfiguration;
+
+    /**
+     * Inject the sendMailService
+     *
+     * @param \ChriWo\Staffholiday\Domain\Service\SendMailService $sendMailService
+     */
+    public function injectSendMailService(\ChriWo\Staffholiday\Domain\Service\SendMailService $sendMailService)
+    {
+        $this->sendMailService = $sendMailService;
+    }
+
+    /**
+     * Inject a plan repository
+     *
+     * @param \ChriWo\Staffholiday\Domain\Repository\PlanRepository $planRepository
+     */
+    public function injectPlanRepository(\ChriWo\Staffholiday\Domain\Repository\PlanRepository $planRepository)
+    {
+        $this->planRepository = $planRepository;
+    }
 
     public function initializeAction()
     {

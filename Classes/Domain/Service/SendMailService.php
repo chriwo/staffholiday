@@ -44,7 +44,6 @@ class SendMailService
      * objectManager.
      *
      * @var \TYPO3\CMS\Extbase\Object\ObjectManager
-     * @inject
      */
     protected $objectManager;
 
@@ -52,9 +51,28 @@ class SendMailService
      * configurationManager.
      *
      * @var \TYPO3\CMS\Extbase\Configuration\ConfigurationManager
-     * @inject
      */
     protected $configurationManager;
+
+    /**
+     * Inject a object manager
+     *
+     * @param \TYPO3\CMS\Extbase\Object\ObjectManager $objectManager
+     */
+    public function injectObjectManager(\TYPO3\CMS\Extbase\Object\ObjectManager $objectManager)
+    {
+        $this->objectManager = $objectManager;
+    }
+
+    /**
+     * Inject a configuration manager
+     * @param \TYPO3\CMS\Extbase\Configuration\ConfigurationManager $configurationManager
+     */
+    public function injectConfigurationMananger(
+        \TYPO3\CMS\Extbase\Configuration\ConfigurationManager $configurationManager
+    ) {
+        $this->configurationManager = $configurationManager;
+    }
 
     /**
      * Generate and send Email.

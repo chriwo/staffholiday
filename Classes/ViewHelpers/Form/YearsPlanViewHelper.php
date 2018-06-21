@@ -47,9 +47,18 @@ class YearsPlanViewHelper extends AbstractViewHelper
 {
     /**
      * @var \ChriWo\Staffholiday\Domain\Repository\PlanRepository
-     * @inject
      */
     protected $planRepository;
+
+    /**
+     * Inject a plan repository
+     *
+     * @param \ChriWo\Staffholiday\Domain\Repository\PlanRepository $planRepository
+     */
+    public function injectPlanRepository(\ChriWo\Staffholiday\Domain\Repository\PlanRepository $planRepository)
+    {
+        $this->planRepository = $planRepository;
+    }
 
     /**
      * @param bool $excludeExpired
