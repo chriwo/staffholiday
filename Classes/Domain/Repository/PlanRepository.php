@@ -72,6 +72,7 @@ class PlanRepository extends AbstractRepository
      * @param \TYPO3\CMS\Extbase\Persistence\QueryInterface $query
      * @param array $settings
      * @return array
+     * @throws \TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException
      */
     protected function createContrainsFromSettings(QueryInterface $query, $settings)
     {
@@ -113,6 +114,7 @@ class PlanRepository extends AbstractRepository
      * @param \TYPO3\CMS\Extbase\Persistence\QueryInterface $query
      * @param string $userGroupList Comma-separated list of user group uid
      * @return null|\TYPO3\CMS\Extbase\Persistence\Generic\Qom\OrInterface
+     * @throws \TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException
      */
     protected function createUserGroupConstrain(QueryInterface $query, $userGroupList)
     {
@@ -135,6 +137,7 @@ class PlanRepository extends AbstractRepository
      *
      * @param \TYPO3\CMS\Extbase\Persistence\QueryInterface $query
      * @return \TYPO3\CMS\Extbase\Persistence\Generic\Qom\ComparisonInterface
+     * @throws \TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException
      */
     protected function createExcludeExpiredPlanContrain(QueryInterface $query)
     {
@@ -148,6 +151,7 @@ class PlanRepository extends AbstractRepository
      * @param \TYPO3\CMS\Extbase\Persistence\QueryInterface $query
      * @param int $year
      * @return null|\TYPO3\CMS\Extbase\Persistence\Generic\Qom\AndInterface
+     * @throws \TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException
      */
     protected function createYearConstrain(QueryInterface $query, $year)
     {
@@ -173,6 +177,7 @@ class PlanRepository extends AbstractRepository
      * @param \TYPO3\CMS\Extbase\Persistence\QueryInterface $query
      * @param array $filter
      * @return null|\TYPO3\CMS\Extbase\Persistence\Generic\Qom\OrInterface
+     * @throws \TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException
      */
     protected function createSearchConstrain(QueryInterface $query, $filter)
     {

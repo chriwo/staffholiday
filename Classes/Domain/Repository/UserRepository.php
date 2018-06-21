@@ -26,6 +26,7 @@ class UserRepository extends FrontendUserRepository
      * @param array $settings Flexform and TypoScript Settings
      * @param array $filter Filter Array
      * @return array|\TYPO3\CMS\Extbase\Persistence\QueryResultInterface
+     * @throws \TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException
      */
     public function findByUsergroups($userGroupList, $settings, $filter)
     {

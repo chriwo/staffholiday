@@ -132,6 +132,8 @@ class NewController extends AbstractController
 
     /**
      * @return void
+     * @throws \TYPO3\CMS\Extbase\Mvc\Exception\InvalidArgumentNameException
+     * @throws \TYPO3\CMS\Extbase\Mvc\Exception\NoSuchArgumentException
      * @throws \TYPO3\CMS\Extbase\Mvc\Exception\StopActionException
      */
     public function initializeCreateAction()
