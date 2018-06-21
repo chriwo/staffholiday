@@ -184,12 +184,14 @@ abstract class AbstractController extends ActionController
      * @param string $action
      * @param string $redirectByActionName Action to redirect
      * @param string $status
+     * @return void
      * @throws \TYPO3\CMS\Extbase\Configuration\Exception\InvalidConfigurationTypeException
      * @throws \TYPO3\CMS\Extbase\Mvc\Exception\InvalidControllerNameException
      * @throws \TYPO3\CMS\Extbase\Mvc\Exception\InvalidExtensionNameException
      * @throws \TYPO3\CMS\Extbase\Mvc\Exception\StopActionException
      * @throws \TYPO3\CMS\Extbase\Mvc\Exception\UnsupportedRequestTypeException
-     * @return void
+     * @throws \TYPO3\CMS\Extbase\SignalSlot\Exception\InvalidSlotException
+     * @throws \TYPO3\CMS\Extbase\SignalSlot\Exception\InvalidSlotReturnException
      */
     public function finalCreate($plan, $action, $redirectByActionName, $status = '')
     {
