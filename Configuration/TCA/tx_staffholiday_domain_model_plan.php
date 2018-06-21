@@ -66,23 +66,23 @@ $planColumns = [
     ],
     'columns' => [
         'sys_language_uid' => [
-            'exclude' => 1,
-            'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.language',
+            'exclude' => true,
+            'label' => 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.language',
             'config' => [
                 'type' => 'select',
                 'renderType' => 'selectSingle',
                 'foreign_table' => 'sys_language',
                 'foreign_table_where' => 'ORDER BY sys_language.title',
                 'items' => [
-                    ['LLL:EXT:lang/locallang_general.xlf:LGL.allLanguages', -1],
-                    ['LLL:EXT:lang/locallang_general.xlf:LGL.default_value', 0],
+                    ['LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.allLanguages', -1],
+                    ['LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.default_value', 0],
                 ],
             ],
         ],
         'l10n_parent' => [
             'displayCond' => 'FIELD:sys_language_uid:>:0',
-            'exclude' => 1,
-            'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.l18n_parent',
+            'exclude' => true,
+            'label' => 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.l18n_parent',
             'config' => [
                 'type' => 'select',
                 'renderType' => 'selectSingle',
@@ -100,7 +100,7 @@ $planColumns = [
             ],
         ],
         't3ver_label' => [
-            'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.versionLabel',
+            'label' => 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.versionLabel',
             'config' => [
                 'type' => 'input',
                 'size' => 30,
@@ -108,89 +108,81 @@ $planColumns = [
             ],
         ],
         'hidden' => [
-            'exclude' => 1,
-            'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.hidden',
+            'exclude' => true,
+            'label' => 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.hidden',
             'config' => [
                 'type' => 'check',
             ],
         ],
         'starttime' => [
-            'exclude' => 1,
-            'l10n_mode' => 'mergeIfNotBlank',
-            'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.starttime',
+            'exclude' => true,
+            'label' => 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.starttime',
             'config' => [
                 'type' => 'input',
-                'size' => 13,
-                'max' => 20,
+                'renderType' => 'inputDateTime',
                 'eval' => 'datetime',
-                'checkbox' => 0,
                 'default' => 0,
                 'range' => [
                     'lower' => mktime(0, 0, 0, date('m'), date('d'), date('Y')),
-                ],
+                ]
             ],
         ],
         'endtime' => [
-            'exclude' => 1,
-            'l10n_mode' => 'mergeIfNotBlank',
-            'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.endtime',
+            'exclude' => true,
+            'label' => 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.endtime',
             'config' => [
                 'type' => 'input',
-                'size' => 13,
-                'max' => 20,
+                'renderType' => 'inputDateTime',
                 'eval' => 'datetime',
-                'checkbox' => 0,
                 'default' => 0,
                 'range' => [
                     'lower' => mktime(0, 0, 0, date('m'), date('d'), date('Y')),
-                ],
+                ]
             ],
         ],
         'crdate' => [
             'label' => $llDb . $model . '.crdate',
             'config' => [
                 'type' => 'input',
-                'size' => 15,
+                'renderType' => 'inputDateTime',
                 'eval' => 'datetime',
                 'readOnly' => 1,
             ],
         ],
         'holiday_begin' => [
-            'exclude' => 0,
-            'l10n_mode' => 'mergeIfNotBlank',
+            'exclude' => false,
             'label' => $llDb . $model . '.holiday_begin',
             'config' => [
                 'type' => 'input',
-                'size' => 13,
-                'max' => 20,
+                'renderType' => 'inputDateTime',
                 'eval' => 'required,' . $extConfiguration->getDateTimeHoliday(),
                 'default' => time(),
             ],
         ],
         'holiday_end' => [
-            'exclude' => 0,
-            'l10n_mode' => 'mergeIfNotBlank',
+            'exclude' => false,
             'label' => $llDb . $model . '.holiday_end',
             'config' => [
                 'type' => 'input',
-                'size' => 13,
-                'max' => 20,
+                'renderType' => 'inputDateTime',
                 'eval' => 'required,' . $extConfiguration->getDateTimeHoliday(),
                 'default' => 0,
             ],
         ],
         'notice' => [
-            'exclude' => 0,
-            'l10n_mode' => 'mergeIfNotBlank',
+            'exclude' => false,
             'label' => $llDb . $model . '.notice',
             'config' => [
                 'type' => 'text',
                 'cols' => 40,
                 'rows' => 5,
             ],
+            'behaviour' => [
+                'allowLanguageSynchronization' => 1
+            ]
         ],
         'status' => [
-            'exclude' => 0,
+            'exclude' => false,
             'label' => $llDb . $model . '.status',
             'config' => [
                 'type' => 'select',
@@ -205,7 +197,7 @@ $planColumns = [
             ],
         ],
         'user' => [
-            'exclude' => 0,
+            'exclude' => false,
             'label' => $llDb . $model . '.user',
             'config' => [
                 'type' => 'select',
@@ -226,7 +218,7 @@ $planColumns = [
 
 if (!$extConfiguration->isDisableLog()) {
     $planColumns['columns']['log'] = [
-        'exclude' => 1,
+        'exclude' => true,
         'label' => $llDb . $model . '.log',
         'config' => [
             'type' => 'inline',
