@@ -24,4 +24,31 @@ class ObjectUtility extends AbstractUtility
     {
         return parent::getConnectionPool();
     }
+
+    /**
+     * Returns an log object
+     * @return \ChriWo\Staffholiday\Domain\Model\Log
+     */
+    public static function getLog()
+    {
+        return parent::getLog();
+    }
+
+    /**
+     * Returns an log repository
+     * @return \ChriWo\Staffholiday\Domain\Repository\LogRepository
+     */
+    public static function getLogRepository()
+    {
+        return parent::getLogRepository();
+    }
+
+    /**
+     * Returns an dispatcher
+     * @return \TYPO3\CMS\Extbase\SignalSlot\Dispatcher
+     */
+    public static function getDispatcher()
+    {
+        return parent::getDispatcher();
+    }
 }
