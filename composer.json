@@ -22,6 +22,9 @@
 	"require": {
 		"typo3/cms": ">=8.7.0 <9.0.0"
 	},
+	"require-dev": {
+		"nimut/testing-framework": "^4"
+	},
 	"autoload": {
 		"psr-4": {
 			"ChriWo\\Staffholiday\\": "Classes"
