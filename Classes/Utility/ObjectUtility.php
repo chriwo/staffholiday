@@ -17,8 +17,7 @@ class ObjectUtility extends AbstractUtility
 {
     /**
      * Returns an connection pool
-     *
-     * @return object|\TYPO3\CMS\Core\Database\ConnectionPool
+     * @return \TYPO3\CMS\Core\Database\ConnectionPool
      */
     public static function getConnectionPool()
     {

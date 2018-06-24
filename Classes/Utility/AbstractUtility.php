@@ -25,7 +25,7 @@ use TYPO3\CMS\Extbase\SignalSlot\Dispatcher;
 abstract class AbstractUtility
 {
     /**
-     * @return object|\TYPO3\CMS\Extbase\Persistence\Generic\PersistenceManager
+     * @return \TYPO3\CMS\Extbase\Persistence\Generic\PersistenceManager
      */
     public static function getPersistenceManager()
     {
@@ -41,7 +41,7 @@ abstract class AbstractUtility
     }
 
     /**
-     * @return object|\TYPO3\CMS\Extbase\Configuration\ConfigurationManager
+     * @return \TYPO3\CMS\Extbase\Configuration\ConfigurationManager
      */
     protected static function getConfigurationManager()
     {
@@ -51,7 +51,7 @@ abstract class AbstractUtility
     /**
      * Create an instance of connection pool.
      *
-     * @return object|\TYPO3\CMS\Core\Database\ConnectionPool
+     * @return \TYPO3\CMS\Core\Database\ConnectionPool
      */
     protected static function getConnectionPool()
     {
