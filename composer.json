@@ -20,10 +20,10 @@
 		}
 	],
 	"require": {
-		"typo3/cms": "^8.7 || >=9.1 <9.3"
+		"typo3/cms-core": "^7.6 || ^8.7 || >=9.1 <9.3"
 	},
 	"require-dev": {
-		"nimut/testing-framework": "^4"
+		"nimut/testing-framework": "2.x-dev || 4.x-dev"
 	},
 	"autoload": {
 		"psr-4": {
