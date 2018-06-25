@@ -7,7 +7,7 @@
 
 - Based on extbase & fluid, implementing best practices from TYPO3 CMS
 - Frontend template based on Twitter Bootstrap (v3) 
-- (Well documented)[1]
+- [Well documented][1]
 
 ## Usage
 
@@ -16,7 +16,7 @@
 
 #### Installation using Composer
 
-The recommended way to install the extension is by using (Composer)[2]. In your Composer based TYPO3 project root,
+The recommended way to install the extension is by using [Composer][2]. In your Composer based TYPO3 project root,
 just do `composer require chriwo/staffholiday`. 
 
 #### Installation as extension from TYPO3 Extension Repository (TER)
