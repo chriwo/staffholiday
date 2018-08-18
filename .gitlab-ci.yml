@@ -17,6 +17,10 @@ variables:
   typo3DatabaseUsername: "root"
   typo3DatabasePassword: "joh316"
 
+stages:
+  - test
+  - upload
+
 cgl:
   image: composer
   stage: test
@@ -60,3 +64,27 @@ typo3_8lts 3/3:
   image: php:7.2-alpine
   variables:
     TYPO3_VERSION: ^8
+
+# TER Upload when tagging in master branch
+ter-upload:
+  image: php:7-alpine
+  stage: upload
+  only:
+  - tags
+  before_script:
+  - curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+  script:
+  - composer install
+  # Get the package for uploading to TER (thx to Claus)
+  - composer require namelesscoder/typo3-repository-client
+  # Upload to TER if a Git tag was set (and username/password is set in the global variables)
+  - >
+    if [ -n "$CI_COMMIT_TAG" ] && [ -n "$T3O_USERNAME" ] && [ -n "$T3O_PASSWORD" ]; then
+      echo -e "Preparing upload of release ${CI_COMMIT_TAG} to TER\n"
+      # Cleanup before we upload
+      git reset --hard HEAD && git clean -fx
+      # Upload
+      TAG_MESSAGE=`git tag -n10 -l $CI_COMMIT_TAG | sed 's/^[0-9.]*[ ]*//g'`
+      echo "Uploading release ${CI_COMMIT_TAG} to TER"
+      .Build/bin/upload . "$T3O_USERNAME" "$T3O_PASSWORD" "$TAG_MESSAGE"
+    fi;
