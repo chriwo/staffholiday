@@ -43,14 +43,20 @@ cgl:
   - .Build/bin/phpunit --colors  -c .Build/vendor/nimut/testing-framework/res/Configuration/UnitTests.xml Tests/Unit/
   - find . -name \*.php ! -path "./.Build/*" | parallel --gnu php -d display_errors=stderr -l {} > /dev/null
 
-typo3_8lts 1/2:
+typo3_8lts 1/3:
   <<: *test_php
   image: php:7.0-alpine
   variables:
     TYPO3_VERSION: ^8
 
-typo3_8lts 2/2:
+typo3_8lts 2/3:
   <<: *test_php
   image: php:7.1-alpine
+  variables:
+    TYPO3_VERSION: ^8
+
+typo3_8lts 3/3:
+  <<: *test_php
+  image: php:7.2-alpine
   variables:
     TYPO3_VERSION: ^8
