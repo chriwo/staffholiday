@@ -7,20 +7,12 @@
 			<div class="media">
 				<div class="pull-left">
 					<f:if condition="{planItem.user.image.0}">
-						<f:then>
-							<f:alias map="{userImage: planItem.user.image.0}">
-								<f:image src="{userImage.uid}" treatIdAsReference="true"
-												 class="media-photo"
-												 width="{settings.list.image.width}"
-												 height="{settings.list.image.height}"/>
-							</f:alias>
-						</f:then>
-						<f:else>
-							<f:image src="{uploadFolder}/{chriwo:firstImage(string:'{planItem.user.image}')}"
-											 class="media-photo"
-											 width="{settings.list.image.width}"
-											 height="{settings.list.image.height}"/>
-						</f:else>
+						<f:alias map="{userImage: planItem.user.image.0}">
+							<f:image image="{userImage}"
+								class="media-photo"
+								width="{settings.list.image.width}"
+								height="{settings.list.image.height}"/>
+						</f:alias>
 					</f:if>
 				</div>
 
