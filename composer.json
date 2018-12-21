@@ -20,7 +20,7 @@
 		}
 	],
 	"require": {
-		"typo3/cms": ">=8.7.0 <9.0.0"
+		"typo3/cms": ">=8.7.0 <10.0.0"
 	},
 	"require-dev": {
 		"friendsofphp/php-cs-fixer": "^2.0",
@@ -46,6 +46,9 @@
 		]
 	},
 	"extra": {
+		"branch-alias": {
+      		"dev-master": "2.x-dev"
+    	},
 		"typo3/cms": {
 			"cms-package-dir": "{$vendor-dir}/typo3/cms",
 			"web-dir": ".Build/Web"
