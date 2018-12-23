@@ -1,8 +1,9 @@
 <?php
+declare(strict_types=1);
 namespace ChriWo\Staffholiday\ViewHelpers\Form;
 
 use ChriWo\Staffholiday\Utility\LocalizationUtility;
-use TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper;
+use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
 
 /**
  * This file is part of the "staffholiday" Extension for TYPO3 CMS.
@@ -35,6 +36,12 @@ class YearsPlanViewHelper extends AbstractViewHelper
      */
     protected $planRepository;
 
+    public function initializeArguments()
+    {
+        parent::initializeArguments();
+        $this->registerArgument('excludeExpired', 'bool', 'Exclude expired holidays', false, 'bool');
+    }
+
     /**
      * Inject a plan repository
      *
@@ -46,15 +53,14 @@ class YearsPlanViewHelper extends AbstractViewHelper
     }
 
     /**
-     * @param bool $excludeExpired
      * @return array
      */
-    public function render($excludeExpired = false)
+    public function render(): array
     {
         $resultYears = [
             '' => LocalizationUtility::translate('filterYearPlaceholder'),
         ];
-        $years = $this->planRepository->findYears($excludeExpired);
+        $years = $this->planRepository->findYears($this->arguments['excludeExpired']);
 
         foreach ($years as $year) {
             $resultYears[$year['years']] = $year['years'];
