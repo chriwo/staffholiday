@@ -37,7 +37,7 @@
                 <source>No holiday plans available</source>
             </trans-unit>
             <trans-unit id="notLoggedIn">
-                <source>Bitte melden Sie sich zuvor an</source>
+                <source>Please log in first</source>
             </trans-unit>
 
             <trans-unit id="tx_staffholiday_domain_model_plan.staff">
