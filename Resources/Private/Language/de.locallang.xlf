@@ -26,7 +26,7 @@
             </trans-unit>
 
             <trans-unit id="filterSearchWordPlaceholder">
-                <target>Mitarbeiter</target>
+                <target>Name eines Mitarbeiters</target>
             </trans-unit>
             <trans-unit id="filterYearPlaceholder">
                 <target>Alle Jahre</target>

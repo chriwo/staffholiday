@@ -25,7 +25,7 @@
                 <source>Y-m-d H:i:s</source>
             </trans-unit>
             <trans-unit id="filterSearchWordPlaceholder">
-                <source>Staff</source>
+                <source>Name of a staff member</source>
             </trans-unit>
             <trans-unit id="filterYearPlaceholder">
                 <source>All years</source>
