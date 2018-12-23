@@ -66,6 +66,12 @@ typo3_8lts 3/3:
   variables:
     TYPO3_VERSION: ^8
 
+typo3_9lts 1/1:
+  <<: *test_php
+  image: php:7.2-alpine
+  variables:
+    TYPO3_VERSION: ^9
+
 # TER Upload when tagging in master branch
 ter-upload:
   image: php:7-alpine
