@@ -15,7 +15,7 @@ use TYPO3\CMS\Extbase\Utility\LocalizationUtility as LocalizationUtilityExtbase;
 /**
  * Class LocalizationUtility.
  */
-class LocalizationUtility extends LocalizationUtilityExtbase
+class LocalizationUtility extends AbstractUtility
 {
     /**
      * Returns the localized label of the LOCAL_LANG key, but prefill extensionName.
@@ -27,7 +27,7 @@ class LocalizationUtility extends LocalizationUtilityExtbase
      */
     public static function translate($key, $extensionName = 'staffholiday', $arguments = null)
     {
-        return parent::translate($key, $extensionName, $arguments);
+        return (string) LocalizationUtilityExtbase::translate($key, $extensionName, $arguments);
     }
 
     /**
