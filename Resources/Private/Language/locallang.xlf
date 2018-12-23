@@ -24,7 +24,13 @@
             <trans-unit id="format-datetime">
                 <source>Y-m-d H:i:s</source>
             </trans-unit>
-            <trans-unit id="filterSearchWordPlaceholder">
+			<trans-unit id="filterLabelYear">
+				<source>Year</source>
+			</trans-unit>
+			<trans-unit id="filterLabelStaff">
+				<source>Staff</source>
+			</trans-unit>
+			<trans-unit id="filterSearchWordPlaceholder">
                 <source>Name of a staff member</source>
             </trans-unit>
             <trans-unit id="filterYearPlaceholder">

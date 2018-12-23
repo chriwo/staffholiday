@@ -24,7 +24,12 @@
             <trans-unit id="format-datetime">
                 <target>d.m.Y H:i:s</target>
             </trans-unit>
-
+			<trans-unit id="filterLabelYear">
+				<target>Jahr</target>
+			</trans-unit>
+			<trans-unit id="filterLabelStaff">
+				<target>Mitarbeiter</target>
+			</trans-unit>
             <trans-unit id="filterSearchWordPlaceholder">
                 <target>Name eines Mitarbeiters</target>
             </trans-unit>

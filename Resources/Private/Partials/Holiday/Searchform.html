@@ -7,7 +7,9 @@
 			<f:form name="filter" class="form-inline" object="{filter}">
 
 				<div class="form-group">
-					<label class="sr-only" for="tx-staffholiday_year">Jahr</label>
+					<label class="sr-only" for="tx-staffholiday_year">
+						{f:translate(key:'filterLabelYear')}
+					</label>
 					<f:form.select
 						id="tx-staffholiday_year"
 						property="year"
@@ -18,7 +20,9 @@
 
 				<f:if condition="{settings.list.user} != '[this]'">
 					<div class="form-group">
-						<label class="sr-only" for="tx-staffholiday_searchword">Suchbegriff</label>
+						<label class="sr-only" for="tx-staffholiday_searchword">
+							{f:translate(key:'filterLabelStaff')}
+						</label>
 						<f:form.textfield
 							id="tx-staffholiday_searchword"
 							property="searchword"
