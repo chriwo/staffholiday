@@ -20,7 +20,8 @@
 		}
 	],
 	"require": {
-		"typo3/cms-core": "^8.7.0 || ^9.5"
+		"typo3/cms-core": "^8.7.0 || ^9.5",
+		"typo3/cms-felogin": "^8.7.0 || ^9.5"
 	},
 	"require-dev": {
 		"friendsofphp/php-cs-fixer": "^2.0",
