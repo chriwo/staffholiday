@@ -42,7 +42,8 @@ cgl:
   - php -r "if (hash_file('SHA384', 'composer-setup.php') === file_get_contents('installer.sig')) { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
   - php composer-setup.php --no-ansi --install-dir=/usr/bin --filename=composer
   - php -r "unlink('composer-setup.php'); unlink('installer.sig');"
-  - composer require typo3/cms="${TYPO3_VERSION}"
+  - (if [ "${TYPO3_VERSION}" == "^8" ]; then composer require typo3/cms="${TYPO3_VERSION}"; else echo "typo3/cms is not needed in TYPO3 '${TYPO3_VERSION}'"; fi);
+
   script:
   - .Build/bin/phpunit --colors  -c .Build/vendor/nimut/testing-framework/res/Configuration/UnitTests.xml Tests/Unit/
   - find . -name \*.php ! -path "./.Build/*" | parallel --gnu php -d display_errors=stderr -l {} > /dev/null
