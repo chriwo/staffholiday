@@ -69,7 +69,7 @@ typo3_8lts 3/3:
 
 # TER Upload when tagging in master branch
 ter-upload:
-  image: php:7-alpine
+  image: php:7.0-alpine
   stage: upload
   only:
   - tags
