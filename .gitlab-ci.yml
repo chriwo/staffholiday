@@ -42,7 +42,7 @@ cgl:
   - php -r "if (hash_file('SHA384', 'composer-setup.php') === file_get_contents('installer.sig')) { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
   - php composer-setup.php --no-ansi --install-dir=/usr/bin --filename=composer
   - php -r "unlink('composer-setup.php'); unlink('installer.sig');"
-  - (if [ "${TYPO3_VERSION}" == "^8" ]; then composer require typo3/cms="${TYPO3_VERSION}"; else echo "typo3/cms is not needed in TYPO3 '${TYPO3_VERSION}'"; fi);
+  - composer require typo3/cms="${TYPO3_VERSION}"
 
   script:
   - .Build/bin/phpunit --colors  -c .Build/vendor/nimut/testing-framework/res/Configuration/UnitTests.xml Tests/Unit/
@@ -66,12 +66,6 @@ typo3_8lts 3/3:
   image: php:7.2-alpine
   variables:
     TYPO3_VERSION: ^8
-
-typo3_9lts 1/1:
-  <<: *test_php
-  image: php:7.2-alpine
-  variables:
-    TYPO3_VERSION: ^9
 
 # TER Upload when tagging in master branch
 ter-upload:
