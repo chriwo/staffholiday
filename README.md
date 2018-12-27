@@ -8,6 +8,7 @@
 - Based on extbase & fluid, implementing best practices from TYPO3 CMS
 - Frontend template based on Twitter Bootstrap (v3) 
 - [Well documented][1]
+- Supports TYPO3 v8 and v9
 
 ## Usage
 
