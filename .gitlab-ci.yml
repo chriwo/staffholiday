@@ -32,6 +32,7 @@ cgl:
 
 .test: &test_php
   stage: test
+  image: php:$DOCKER_TAG
   services:
   - mysql:5
   before_script:
@@ -51,20 +52,20 @@ cgl:
 
 typo3_8lts 1/3:
   <<: *test_php
-  image: php:7.0-alpine
   variables:
+    DOCKER_TAG: 7.0-alpine
     TYPO3_VERSION: ^8
 
 typo3_8lts 2/3:
   <<: *test_php
-  image: php:7.1-alpine
   variables:
+    DOCKER_TAG: 7.1-alpine
     TYPO3_VERSION: ^8
 
 typo3_8lts 3/3:
   <<: *test_php
-  image: php:7.2-alpine
   variables:
+    DOCKER_TAG: 7.2-alpine
     TYPO3_VERSION: ^8
 
 # TER Upload when tagging in master branch
